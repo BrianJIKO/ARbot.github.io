@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz sobre transformación digital e inteligencia artificial - CONPES 3975">
+    <title>Quiz: Transformación Digital | AR Bot</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="quiz-body">
+    
+    <!-- NAVBAR SIMPLIFICADO -->
+    <nav class="navbar navbar-quiz">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <img src="images/Logo.png" alt="AR Bot Logo" class="logo-img">
+                    <span class="logo-text">AR BOT</span>
+                </a>
+            </div>
+            <button class="btn-exit" id="btnExit">
+                ❌ Salir
+            </button>
+        </div>
+    </nav>
+
+    <!-- QUIZ CONTAINER -->
+    <div class="quiz-container">
+        <div class="container">
+            
+            <!-- BARRA DE PROGRESO -->
+            <div class="quiz-progress-bar">
+                <div class="progress-info">
+                    <span class="progress-label">Pregunta <span id="currentQuestion">1</span> de <span id="totalQuestions">10</span></span>
+                    <span class="progress-percentage" id="progressPercentage">0%</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill-quiz" id="progressFill"></div>
+                </div>
+            </div>
+
+            <!-- ÁREA DE PREGUNTA -->
+            <div class="quiz-question-area" id="quizQuestionArea">
+                <div class="quiz-badge badge-3975">CONPES 3975</div>
+                
+                <h2 class="question-number" id="questionNumber">Pregunta 1</h2>
+                <h3 class="question-text" id="questionText"></h3>
+                
+                <!-- OPCIONES DE RESPUESTA -->
+                <div class="answer-options" id="answerOptions">
+                    <!-- Se generarán dinámicamente con JavaScript -->
+                </div>
+
+                <!-- FEEDBACK -->
+                <div class="feedback-box" id="feedbackBox" style="display: none;">
+                    <div class="feedback-icon" id="feedbackIcon"></div>
+                    <div class="feedback-content">
+                        <h4 class="feedback-title" id="feedbackTitle"></h4>
+                        <p class="feedback-explanation" id="feedbackExplanation"></p>
+                        <p class="feedback-hint" id="feedbackHint"></p>
+                    </div>
+                </div>
+
+                <!-- BOTÓN SIGUIENTE -->
+                <button class="btn btn-primary btn-next" id="btnNext" disabled>
+                    Siguiente →
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL DE RESULTADOS -->
+    <div class="modal" id="resultsModal" style="display: none;">
+        <div class="modal-content results-modal">
+            <div class="results-header">
+                <div class="results-emoji" id="resultsEmoji">🎉</div>
+                <h2 class="results-title" id="resultsTitle">¡Quiz Completado!</h2>
+            </div>
+            
+            <div class="results-score">
+                <div class="score-circle">
+                    <svg width="200" height="200">
+                        <circle cx="100" cy="100" r="90" fill="none" stroke="#E5E7EB" stroke-width="12"/>
+                        <circle id="scoreCircle" cx="100" cy="100" r="90" fill="none" stroke="#00CC66" stroke-width="12" 
+                                stroke-dasharray="565" stroke-dashoffset="565" 
+                                transform="rotate(-90 100 100)" stroke-linecap="round"/>
+                    </svg>
+                    <div class="score-text">
+                        <div class="score-percentage" id="finalScorePercentage">0%</div>
+                        <div class="score-label">de aciertos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-stats">
+                <div class="result-stat">
+                    <div class="stat-icon-large">✅</div>
+                    <div class="stat-value" id="correctAnswers">0</div>
+                    <div class="stat-label">Correctas</div>
+                </div>
+                <div class="result-stat">
+                    <div class="stat-icon-large">❌</div>
+                    <div class="stat-value" id="incorrectAnswers">0</div>
+                    <div class="stat-label">Incorrectas</div>
+                </div>
+            </div>
+            
+            <div class="results-message" id="resultsMessage"></div>
+            
+            <div class="results-actions">
+                <a href="practica.html" class="btn btn-secondary">Volver a Quizzes</a>
+                <button class="btn btn-primary" id="btnRetry">Reintentar Quiz</button>
+            </div>
+            
+            <div class="results-share">
+                <p>Comparte tu logro:</p>
+                <div class="share-buttons">
+                    <button class="share-btn share-twitter" onclick="shareResultsTwitter()">🐦 Twitter</button>
+                    <button class="share-btn share-whatsapp" onclick="shareResultsWhatsApp()">💬 WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE CONFIRMACIÓN DE SALIDA -->
+    <div class="modal" id="exitModal" style="display: none;">
+        <div class="modal-content exit-modal">
+            <h3>¿Seguro que quieres salir?</h3>
+            <p>Perderás todo el progreso de este quiz.</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="btnCancelExit">Cancelar</button>
+                <a href="practica.html" class="btn btn-primary">Sí, salir</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/quiz-transformacion-digital.js"></script>
+</body>
+</html>

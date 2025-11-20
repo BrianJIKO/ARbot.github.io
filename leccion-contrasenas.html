@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende a crear contraseñas seguras que protejan tus cuentas online">
+    <title>Cómo Crear Contraseñas Seguras - AR Bot</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS Específico de esta lección -->
+    <link rel="stylesheet" href="css/leccion-contrasenas.css">
+</head>
+<body>
+    
+    <!-- Barra de progreso de lectura -->
+    <div class="reading-progress-bar" id="readingProgress"></div>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <img src="images/Logo.png" alt="AR Bot Logo" class="logo-img">
+                    <span class="logo-text">AR BOT</span>
+                </a>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="aprende.html" class="active">Aprende</a></li>
+                <li><a href="practica.html">Practica</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="escanea-ar.html" class="btn-nav-ar">Escanear AR</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER DE LECCIÓN -->
+    <header class="lesson-header">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="aprende.html">Aprende</a>
+                <span class="breadcrumb-separator">›</span>
+                <span>Cómo Crear Contraseñas Seguras</span>
+            </nav>
+            
+            <!-- Badge y Título -->
+            <span class="lesson-badge badge-3995">CONPES 3995</span>
+            <h1 class="lesson-main-title">🔑 Cómo Crear Contraseñas Seguras</h1>
+            
+            <!-- Metadata -->
+            <div class="lesson-metadata">
+                <span class="meta-item">⏱️ 8 min lectura</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item level-basico">Básico</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item">📅 Actualizado: Feb 2025</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="lesson-layout">
+        <div class="container">
+            <div class="lesson-wrapper">
+                
+                <!-- SIDEBAR (Desktop) / Índice colapsable (Móvil) -->
+                <aside class="lesson-sidebar" id="lessonSidebar">
+                    <div class="sidebar-sticky">
+                        <button class="sidebar-toggle" id="sidebarToggle">
+                            📑 Índice de contenido
+                        </button>
+                        
+                        <div class="sidebar-content" id="sidebarContent">
+                            <h3 class="sidebar-title">En esta lección</h3>
+                            <nav class="table-of-contents" id="tableOfContents">
+                                <a href="#introduccion" class="toc-link active">Introducción</a>
+                                <a href="#por-que-importa" class="toc-link">¿Por Qué Importa?</a>
+                                <a href="#que-es" class="toc-link">¿Qué es Contraseña Segura?</a>
+                                <a href="#5-reglas" class="toc-link">Las 5 Reglas de Oro</a>
+                                <a href="#metodos-crear" class="toc-link">Métodos para Crear</a>
+                                <a href="#peores-contrasenas" class="toc-link">Las Peores Contraseñas</a>
+                                <a href="#cambiar-contrasenas" class="toc-link">Cuándo Cambiar</a>
+                                <a href="#señales-alerta" class="toc-link">Señales de Alerta</a>
+                                <a href="#gestor-contrasenas" class="toc-link">Gestor de Contraseñas</a>
+                                <a href="#siguiente" class="toc-link">Siguiente Paso</a>
+                            </nav>
+                            
+                            <div class="sidebar-related">
+                                <h4>Lecciones relacionadas</h4>
+                                <a href="leccion-amenazas-ciberneticas.html" class="related-link">
+                                    ⚠️ Amenazas Cibernéticas Comunes
+                                </a>
+                                <a href="leccion-proteccion-datos.html" class="related-link">
+                                    🛡️ Protección de Datos Personales
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- CONTENIDO DEL ARTÍCULO -->
+                <article class="lesson-content" id="lessonContent">
+                    
+                    <!-- Introducción -->
+                    <section id="introduccion">
+                        <div class="lesson-video">
+                            <video controls preload="metadata" id="videoLeccion">
+                                <source src="videos/Microleccion6.mp4" type="video/mp4">
+                                Tu navegador no soporta la reproducción de videos. 
+                                <a href="videos/Microleccion6.mp4">Descarga el video aquí</a>.
+                            </video>
+                            <p class="video-caption">
+                                🎥 Contraseñas Seguras: Tu Primera Defensa Digital
+                                <br>
+                                <small style="opacity: 0.8;">🔊 Asegúrate de que el volumen esté activado</small>
+                            </p>
+                        </div>
+
+                        <div class="ar-option-container">
+                            <div class="ar-option-box">
+                                <a href="https://mywebar.com/p/Project_0_contrasenas" target="_blank" rel="noopener noreferrer" class="qr-link">
+                                    <img src="images/ContrasenasAR.png" alt="Código QR para experiencia AR" class="qr-image">
+                                </a>
+                                <div class="ar-text-content">
+                                    <h4>¿Prefieres Realidad Aumentada?</h4>
+                                    <p>
+                                        Escanea el código QR con tu celular o 
+                                        <a href="https://mywebar.com/p/Project_0_contrasenas" target="_blank" rel="noopener noreferrer">
+                                            haz clic aquí
+                                        </a> 
+                                        para una experiencia interactiva.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="lead-paragraph">
+                            Una contraseña fuerte es como una llave maestra de tu vida digital. Si es débil, los delincuentes acceden a tu correo, redes sociales, banco y más. Una contraseña segura es tu primera línea de defensa contra ataques cibernéticos.
+                        </p>
+                        
+                        <p>
+                            El CONPES 3995 identifica el robo de contraseñas como una de las amenazas más frecuentes en Colombia. La buena noticia: puedes protegerte siguiendo reglas simples.
+                        </p>
+                    </section>
+
+                    <!-- ¿Por Qué Importa? -->
+                    <section id="por-que-importa" class="password-section">
+                        <h2>❓ ¿Por Qué Son Tan Importantes?</h2>
+
+                        <div class="importance-grid">
+                            <div class="importance-box">
+                                <span class="importance-icon">🔓</span>
+                                <h3>Contraseña débil = puerta abierta</h3>
+                                <p>Hackers usan programas que prueban millones de combinaciones automáticamente.</p>
+                            </div>
+
+                            <div class="importance-box">
+                                <span class="importance-icon">⚡</span>
+                                <h3>Se rompen en segundos</h3>
+                                <p>Una contraseña de 8 caracteres se crackea en horas. Una de 12+ tarda años.</p>
+                            </div>
+
+                            <div class="importance-box">
+                                <span class="importance-icon">📱</span>
+                                <h3>Una contraseña = acceso a todo</h3>
+                                <p>Si roban tu contraseña principal, acceden a correo, redes, banco, todo.</p>
+                            </div>
+
+                            <div class="importance-box">
+                                <span class="importance-icon">💰</span>
+                                <h3>Pérdidas económicas reales</h3>
+                                <p>Fraude bancario, robo de identidad, compras no autorizadas.</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-highlight">
+                            <p><strong>📊 Dato:</strong> 536 millones de ataques cibernéticos en Colombia (2017-2019). Muchos iniciaron con contraseñas débiles.</p>
+                        </div>
+                    </section>
+
+                    <!-- ¿Qué es Contraseña Segura? -->
+                    <section id="que-es" class="password-section">
+                        <h2>🔐 ¿Qué es una Contraseña Segura?</h2>
+
+                        <p>
+                            Una contraseña segura es suficientemente compleja y única para que sea casi imposible de adivinar o crackear. Forma parte de lo que el CONPES 3995 llama "ciber higiene": medidas simples que minimizan riesgos.
+                        </p>
+
+                        <div class="comparison-table">
+                            <div class="comparison-row header">
+                                <div class="comparison-cell">❌ DÉBIL</div>
+                                <div class="comparison-cell">✅ FUERTE</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-cell weak">
+                                    <code>casa123</code><br>
+                                    <small>Solo letras y números simples</small>
+                                </div>
+                                <div class="comparison-cell strong">
+                                    <code>C@s@Azul#2024!</code><br>
+                                    <small>Mixto: mayús, números, símbolos</small>
+                                </div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-cell weak">
+                                    <code>password</code><br>
+                                    <small>Palabra común</small>
+                                </div>
+                                <div class="comparison-cell strong">
+                                    <code>MgL0p3z#XyZ789!</code><br>
+                                    <small>Aleatoria, sin sentido</small>
+                                </div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-cell weak">
+                                    <code>12345678</code><br>
+                                    <small>Secuencia obvia</small>
+                                </div>
+                                <div class="comparison-cell strong">
+                                    <code>9K@mL2$vR8x</code><br>
+                                    <small>Aleatorio e impredecible</small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Las 5 Reglas de Oro -->
+                    <section id="5-reglas" class="password-section">
+                        <h2>⭐ Las 5 Reglas de Oro</h2>
+
+                        <div class="rules-container">
+                            <div class="rule-card">
+                                <div class="rule-number">1️⃣</div>
+                                <div class="rule-content">
+                                    <h3>Mínimo 12 Caracteres</h3>
+                                    <p><strong>¿Por qué?</strong> Más largo = más difícil de crackear.</p>
+                                    <div class="rule-example">
+                                        <p><strong>❌ Débil:</strong> casa2024 (8 caracteres)</p>
+                                        <p><strong>✅ Fuerte:</strong> MiC@s@Azul#2024 (15 caracteres)</p>
+                                    </div>
+                                    <p class="rule-tip">💡 Los hackers prueban millones de combinaciones por segundo. 12+ caracteres es el mínimo.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-card">
+                                <div class="rule-number">2️⃣</div>
+                                <div class="rule-content">
+                                    <h3>Combina Mayúsculas, Minúsculas, Números, Símbolos</h3>
+                                    <p><strong>Fórmula ganadora:</strong> A-Z + a-z + 0-9 + @#$%&*!?</p>
+                                    <div class="rule-example">
+                                        <p><strong>❌ Débil:</strong> marialopez (solo letras)</p>
+                                        <p><strong>✅ Fuerte:</strong> M@ri@L0p3z#2024! (todo combinado)</p>
+                                    </div>
+                                    <div class="substitution-box">
+                                        <p><strong>🎯 Truco: Sustituciones de Letras</strong></p>
+                                        <ul>
+                                            <li>a → @</li>
+                                            <li>e → 3</li>
+                                            <li>i → !</li>
+                                            <li>o → 0</li>
+                                            <li>s → $</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rule-card">
+                                <div class="rule-number">3️⃣</div>
+                                <div class="rule-content">
+                                    <h3>NO Uses Datos Personales Obvios</h3>
+                                    <p><strong>Evita:</strong> Tu nombre, fecha de nacimiento, números de teléfono, placas de vehículos.</p>
+                                    <div class="avoid-list">
+                                        <div class="avoid-item">❌ maria1990 (nombre + año)</div>
+                                        <div class="avoid-item">❌ 1502198 (fecha de nacimiento)</div>
+                                        <div class="avoid-item">❌ medellin (ciudad)</div>
+                                        <div class="avoid-item">❌ colombia123 (país)</div>
+                                        <div class="avoid-item">❌ futbol (deporte favorito)</div>
+                                    </div>
+                                    <p class="rule-tip">💡 Los hackers investigan tus redes sociales para obtener esta información.</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-card">
+                                <div class="rule-number">4️⃣</div>
+                                <div class="rule-content">
+                                    <h3>Una Contraseña Diferente para Cada Cuenta</h3>
+                                    <p><strong>Problema:</strong> Si reutilizas contraseña y hacen breach en un sitio, acceden a TODAS tus cuentas.</p>
+                                    <div class="rule-example">
+                                        <p><strong>❌ Riesgoso:</strong> Misma contraseña en Gmail, Facebook, Banco, Mercado Libre</p>
+                                        <p><strong>✅ Seguro:</strong> Contraseña única en cada una</p>
+                                    </div>
+                                    <p class="rule-tip">💡 Usa gestor de contraseñas para recordarlas todas (ver sección final).</p>
+                                </div>
+                            </div>
+
+                            <div class="rule-card">
+                                <div class="rule-number">5️⃣</div>
+                                <div class="rule-content">
+                                    <h3>Activa Autenticación de Dos Factores (2FA)</h3>
+                                    <p><strong>¿Qué es?</strong> Capa extra de seguridad: tu contraseña + código SMS/app</p>
+                                    <div class="auth-types">
+                                        <div class="auth-type">
+                                            <span class="auth-icon">📱</span>
+                                            <strong>SMS:</strong> Código por mensaje de texto
+                                        </div>
+                                        <div class="auth-type">
+                                            <span class="auth-icon">🔑</span>
+                                            <strong>App:</strong> Google Authenticator, Microsoft Authenticator
+                                        </div>
+                                        <div class="auth-type">
+                                            <span class="auth-icon">👆</span>
+                                            <strong>Biometría:</strong> Huella digital, reconocimiento facial
+                                        </div>
+                                    </div>
+                                    <p class="rule-tip">💡 Incluso si roban tu contraseña, NO pueden acceder sin el 2FA.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Métodos para Crear -->
+                    <section id="metodos-crear" class="password-section">
+                        <h2>🛠️ 3 Métodos Prácticos para Crear Contraseñas</h2>
+
+                        <div class="method-card">
+                            <div class="method-header">
+                                <h3>Método 1: Frase con Sustituciones</h3>
+                                <p class="method-description">Transforma una frase en contraseña compleja y memorable</p>
+                            </div>
+                            <div class="method-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <p><strong>Elige una frase:</strong> "Me gusta el café colombiano"</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <p><strong>Toma las iniciales:</strong> Mgcc</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <p><strong>Agrega números:</strong> Mgcc2024</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">4</span>
+                                    <p><strong>Sustituye letras:</strong> Mg3c#2024</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">5</span>
+                                    <p><strong>Agrega símbolos:</strong> Mg3c#2024!Col</p>
+                                </div>
+                            </div>
+                            <div class="method-result">
+                                ✅ <strong>Resultado:</strong> <code>Mg3c#2024!Col</code> (14 caracteres, segura)
+                            </div>
+                        </div>
+
+                        <div class="method-card">
+                            <div class="method-header">
+                                <h3>Método 2: Palabras Aleatorias</h3>
+                                <p class="method-description">Combina palabras sin relación y hazlas complejas</p>
+                            </div>
+                            <div class="method-steps">
+                                <div class="step">
+                                    <span class="step-number">1</span>
+                                    <p><strong>Escoge 3-4 palabras sin relación:</strong> Montaña, Guitarra, Nube, Tigre</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">2</span>
+                                    <p><strong>Combínalas:</strong> MontañaGuitarraNubeTigre</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-number">3</span>
+                                    <p><strong>Agrega números y símbolos:</strong> M0nt@ñ@-Guitar4-Nub3-T!gr3</p>
+                                </div>
+                            </div>
+                            <div class="method-result">
+                                ✅ <strong>Resultado:</strong> <code>M0nt@ñ@-Guitar4-Nub3-T!gr3</code> (29 caracteres, extremadamente segura)
+                            </div>
+                        </div>
+
+                        <div class="method-card">
+                            <div class="method-header">
+                                <h3>Método 3: Generador Automático</h3>
+                                <p class="method-description">Crea contraseña aleatoria con herramientas online</p>
+                            </div>
+                            <div class="generator-info">
+                                <p><strong>Sitios confiables:</strong></p>
+                                <ul class="generator-list">
+                                    <li><a href="https://www.lastpass.com/es/features/password-generator" target="_blank">LastPass Password Generator</a></li>
+                                    <li><a href="https://www.random.org/passwords/" target="_blank">Random.org Password Generator</a></li>
+                                </ul>
+                                <p class="generator-note">💡 Luego guarda en gestor de contraseñas (LastPass, Bitwarden)</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Las Peores Contraseñas -->
+                    <section id="peores-contrasenas" class="password-section">
+                        <h2>🚫 Las 10 Peores Contraseñas (¡NUNCA las uses!)</h2>
+
+                        <div class="worst-grid">
+                            <div class="worst-item">
+                                <span class="rank">1</span>
+                                <code>123456</code>
+                                <p>Se crackea en SEGUNDOS</p>
+                            </div>
+                            <div class="worst-item">
+                                <span class="rank">2</span>
+                                <code>password</code>
+                                <p>Palabra más común del mundo</p>
+                            </div>
+                            <div class="worst-item">
+                                <span class="rank">3</span>
+                                <code>admin</code>
+                                <p>Nombre de usuario típico</p>
+                            </div>
+                            <div class="worst-item">
+                                <span class="rank">4</span>
+                                <code>qwerty</code>
+                                <p>Primeras letras del teclado</p>
+                            </div>
+                            <div class="worst-item">
+                                <span class="rank">5</span>
+                                <code>010190</code>
+                                <p>Tu fecha de nacimiento</p>
+                            </div>
+                            <div class="worst-item">
+                                <span class="rank">6</span>
+                                <code>colombia</code>
+                                <p>Tu país o ciudad</p>
+                            </div>
+                            <div class="worst-item">
+                                <span class="rank">7</span>
+                                <code>abcdef</code>
+                                <p>Secuencia obvia</p>
+                            </div>
+                            <div class="worst-item">
+                                <span class="rank">8</span>
+                                <code>maria123</code>
+                                <p>Nombre + números simples</p>
+                            </div>
+                            <div class="worst-item">
+                                <span class="rank">9</span>
+                                <code>millonarios</code>
+                                <p>Tu equipo deportivo favorito</p>
+                            </div>
+                            <div class="worst-item">
+                                <span class="rank">10</span>
+                                <code>welcome</code>
+                                <p>Palabra común en inglés</p>
+                            </div>
+                        </div>
+
+                        <div class="warning-box">
+                            <p><strong>⚠️ Importante:</strong> Estas contraseñas se rompen en SEGUNDOS por programas automatizados. No son solo débiles, son peligrosas.</p>
+                        </div>
+                    </section>
+
+                    <!-- Cuándo Cambiar -->
+                    <section id="cambiar-contrasenas" class="password-section">
+                        <h2>🔄 ¿Cada Cuándo Cambiar Contraseñas?</h2>
+
+                        <div class="change-schedule">
+                            <div class="schedule-item immediate">
+                                <h3>🚨 CAMBIAR INMEDIATAMENTE SI:</h3>
+                                <ul>
+                                    <li>Sospechas que fue comprometida</li>
+                                    <li>Un sitio que usas fue hackeado</li>
+                                    <li>Alguien no autorizado la vio</li>
+                                    <li>La escribiste en computadora pública</li>
+                                </ul>
+                            </div>
+
+                            <div class="schedule-item programmed">
+                                <h3>📅 CAMBIOS PROGRAMADOS:</h3>
+                                <div class="schedule-grid">
+                                    <div class="schedule-box critical">
+                                        <strong>🏦 Cuentas Críticas</strong>
+                                        <p>Banco, correo principal</p>
+                                        <p class="change-frequency">Cada 3-6 meses</p>
+                                    </div>
+                                    <div class="schedule-box important">
+                                        <strong>📱 Cuentas Importantes</strong>
+                                        <p>Trabajo, redes sociales</p>
+                                        <p class="change-frequency">Cada 6-12 meses</p>
+                                    </div>
+                                    <div class="schedule-box normal">
+                                        <strong>💻 Cuentas Normales</strong>
+                                        <p>Compras, entretenimiento</p>
+                                        <p class="change-frequency">Anualmente</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="schedule-item not-necessary">
+                                <h3>✓ NO NECESITAS CAMBIARLA SI:</h3>
+                                <ul>
+                                    <li>Es fuerte y única</li>
+                                    <li>Tienes 2FA activado</li>
+                                    <li>No hay incidentes de seguridad</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Señales de Alerta -->
+                    <section id="señales-alerta" class="password-section">
+                        <h2>⚠️ Señales de Que Tu Contraseña Fue Hackeada</h2>
+
+                        <div class="alert-grid">
+                            <div class="alert-item">
+                                <span class="alert-icon">📧</span>
+                                <h4>Correos de "Nueva Sesión"</h4>
+                                <p>Recibes "Acceso desde [país desconocido]" que no hiciste</p>
+                            </div>
+
+                            <div class="alert-item">
+                                <span class="alert-icon">🔓</span>
+                                <h4>No Puedes Acceder</h4>
+                                <p>Tu contraseña no funciona. Alguien la cambió</p>
+                            </div>
+
+                            <div class="alert-item">
+                                <span class="alert-icon">📱</span>
+                                <h4>Mensajes Que No Enviaste</h4>
+                                <p>Publicaciones, mensajes o amigos nuevos sin tu autorización</p>
+                            </div>
+
+                            <div class="alert-item">
+                                <span class="alert-icon">⚙️</span>
+                                <h4>Cambios en Configuración</h4>
+                                <p>Tu perfil, email o teléfono cambió sin tu permiso</p>
+                            </div>
+
+                            <div class="alert-item">
+                                <span class="alert-icon">💳</span>
+                                <h4>Compras No Autorizadas</h4>
+                                <p>Transacciones bancarias o compras que no hiciste</p>
+                            </div>
+
+                            <div class="alert-item">
+                                <span class="alert-icon">👥</span>
+                                <h4>Pedidos de Recuperación</h4>
+                                <p>Solicitudes de reinicio de contraseña que no solicitaste</p>
+                            </div>
+                        </div>
+
+                        <div class="action-box">
+                            <h4>🚨 Si Detectas Compromiso, Haz Esto AHORA:</h4>
+                            <div class="action-steps">
+                                <div class="action-step">
+                                    <span class="step-num">1</span>
+                                    <p><strong>Cambia contraseña INMEDIATAMENTE</strong> desde otro dispositivo</p>
+                                </div>
+                                <div class="action-step">
+                                    <span class="step-num">2</span>
+                                    <p><strong>Activa 2FA</strong> si aún no lo has hecho</p>
+                                </div>
+                                <div class="action-step">
+                                    <span class="step-num">3</span>
+                                    <p><strong>Revisa actividad reciente</strong> de tu cuenta</p>
+                                </div>
+                                <div class="action-step">
+                                    <span class="step-num">4</span>
+                                    <p><strong>Notifica a tus contactos</strong> sobre el incidente</p>
+                                </div>
+                                <div class="action-step">
+                                    <span class="step-num">5</span>
+                                    <p><strong>Denuncia en CAI Virtual:</strong> caivirtual.policia.gov.co</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Gestor de Contraseñas -->
+                    <section id="gestor-contrasenas" class="password-section">
+                        <h2>🔐 Gestor de Contraseñas: Tu Aliado Secreto</h2>
+
+                        <p>
+                            Es imposible recordar 50+ contraseñas complejas y diferentes. La solución: un gestor de contraseñas confiable.
+                        </p>
+
+                        <div class="manager-grid">
+                            <div class="manager-box">
+                                <h3>LastPass</h3>
+                                <p class="manager-desc">El más popular y confiable</p>
+                                <ul class="manager-features">
+                                    <li>✓ Almacena contraseñas encriptadas</li>
+                                    <li>✓ Rellena automáticamente formularios</li>
+                                    <li>✓ Genera contraseñas seguras</li>
+                                    <li>✓ Disponible en todo dispositivo</li>
+                                </ul>
+                                <a href="https://www.lastpass.com" target="_blank" class="manager-link">Visitar LastPass</a>
+                            </div>
+
+                            <div class="manager-box">
+                                <h3>Bitwarden</h3>
+                                <p class="manager-desc">Código abierto, gratis, seguro</p>
+                                <ul class="manager-features">
+                                    <li>✓ Completamente gratuito</li>
+                                    <li>✓ Código abierto (verificable)</li>
+                                    <li>✓ Encriptación de extremo a extremo</li>
+                                    <li>✓ Sincronización en todos lados</li>
+                                </ul>
+                                <a href="https://bitwarden.com" target="_blank" class="manager-link">Visitar Bitwarden</a>
+                            </div>
+
+                            <div class="manager-box">
+                                <h3>1Password</h3>
+                                <p class="manager-desc">Premium con diseño excelente</p>
+                                <ul class="manager-features">
+                                    <li>✓ Interfaz muy intuitiva</li>
+                                    <li>✓ Almacenamiento de documentos</li>
+                                    <li>✓ Acceso compartido seguro</li>
+                                    <li>✓ Soporte excepcional</li>
+                                </ul>
+                                <a href="https://1password.com" target="_blank" class="manager-link">Visitar 1Password</a>
+                            </div>
+                        </div>
+
+                        <div class="manager-comparison">
+                            <h4>📊 ¿Cómo Elegir?</h4>
+                            <table class="comparison">
+                                <tr>
+                                    <th>Característica</th>
+                                    <th>LastPass</th>
+                                    <th>Bitwarden</th>
+                                    <th>1Password</th>
+                                </tr>
+                                <tr>
+                                    <td><strong>Precio</strong></td>
+                                    <td>$3 USD/mes</td>
+                                    <td>Gratis</td>
+                                    <td>$5 USD/mes</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Seguridad</strong></td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Facilidad</strong></td>
+                                    <td>⭐⭐⭐⭐</td>
+                                    <td>⭐⭐⭐⭐</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Recomendado para:</strong></td>
+                                    <td>Profesionales</td>
+                                    <td>Privacidad máxima</td>
+                                    <td>Comodidad total</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- CTA QUIZ -->
+                    <section class="lesson-cta-section">
+                        <h3>¿Cuánto sabes sobre contraseñas seguras?</h3>
+                        <p>Pon a prueba tu conocimiento con un quiz interactivo.</p>
+                        <a href="practica.html" class="btn btn-accent btn-large">Hacer el Quiz →</a>
+                    </section>
+
+                    <!-- Siguiente Paso -->
+                    <section id="siguiente">
+                        <h2>Siguiente Paso</h2>
+                        <p>
+                            Ahora que dominas contraseñas seguras, aprende a proteger tus datos personales en internet. La privacidad es tu derecho.
+                        </p>
+                        
+                        <div class="next-lesson-card">
+                            <div class="next-lesson-content">
+                                <span class="next-lesson-label">Siguiente lección</span>
+                                <h3>🛡️ Protección de Datos Personales</h3>
+                                <p>Conoce tus derechos digitales y cómo proteger tu información.</p>
+                            </div>
+                            <a href="leccion-proteccion-datos.html" class="btn btn-primary">Continuar →</a>
+                        </div>
+                    </section>
+
+                </article>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER DE LECCIÓN -->
+    <footer class="lesson-footer">
+        <div class="container">
+            
+            <!-- Navegación entre lecciones -->
+            <div class="lesson-navigation">
+                <a href="leccion-amenazas-ciberneticas.html" class="nav-lesson-btn nav-prev">
+                    ← Lección anterior
+                </a>
+                <a href="leccion-proteccion-datos.html" class="nav-lesson-btn nav-next">
+                    Siguiente lección →
+                </a>
+            </div>
+
+            <!-- Compartir en redes -->
+            <div class="lesson-share">
+                <span class="share-label">Compartir esta lección:</span>
+                <div class="share-buttons">
+                    <button class="share-btn share-twitter" onclick="shareOnTwitter()">
+                        🐦 Twitter
+                    </button>
+                    <button class="share-btn share-facebook" onclick="shareOnFacebook()">
+                        📘 Facebook
+                    </button>
+                    <button class="share-btn share-whatsapp" onclick="shareOnWhatsApp()">
+                        💬 WhatsApp
+                    </button>
+                    <button class="share-btn share-copy" onclick="copyLink()">
+                        🔗 Copiar link
+                    </button>
+                </div>
+            </div>
+
+            <!-- Recursos adicionales -->
+            <div class="lesson-resources">
+                <h4>📚 Recursos Adicionales</h4>
+                <ul>
+                    <li><a href="recursos.html" target="_blank">📄 Leer CONPES 3995 completo (PDF)</a></li>
+                    <li><a href="https://haveibeenpwned.com" target="_blank">🔍 Verifica si tu email fue hackeado</a></li>
+                    <li><a href="https://www.lastpass.com/es/features/password-generator" target="_blank">🔐 Generador de Contraseñas</a></li>
+                    <li><a href="https://www.sic.gov.co" target="_blank">⚖️ Superintendencia de Industria y Comercio</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- FOOTER GENERAL -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="aprende.html">Aprende</a></li>
+                        <li><a href="practica.html">Practica</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="acerca-de.html">Acerca de</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="https://www.umng.edu.co" target="_blank">Universidad Militar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AR Bot | CONPES 3975 y 3995</p>
+                <p>Hecho con ❤️ por Brian, Santiago, Juan y David</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/leccion.js"></script>
+</body>
+</html>

@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre cómo participar en la transformación digital de Colombia">
+    <title>¿Cómo Participar? - AR Bot</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS Específico de esta lección -->
+    <link rel="stylesheet" href="css/leccion-como-participar.css">
+</head>
+<body>
+    
+    <!-- Barra de progreso de lectura -->
+    <div class="reading-progress-bar" id="readingProgress"></div>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <img src="images/Logo.png" alt="AR Bot Logo" class="logo-img">
+                    <span class="logo-text">AR BOT</span>
+                </a>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="aprende.html" class="active">Aprende</a></li>
+                <li><a href="practica.html">Practica</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="escanea-ar.html" class="btn-nav-ar">Escanear AR</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER DE LECCIÓN -->
+    <header class="lesson-header">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="aprende.html">Aprende</a>
+                <span class="breadcrumb-separator">›</span>
+                <span>¿Cómo Participar?</span>
+            </nav>
+            
+            <!-- Badge y Título -->
+            <span class="lesson-badge badge-3975">CONPES 3975</span>
+            <h1 class="lesson-main-title">🤝 ¿Cómo Participar en la Transformación Digital?</h1>
+            
+            <!-- Metadata -->
+            <div class="lesson-metadata">
+                <span class="meta-item">⏱️ 10 min lectura</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item level-intermedio">Intermedio</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item">📅 Actualizado: Feb 2025</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="lesson-layout">
+        <div class="container">
+            <div class="lesson-wrapper">
+                
+                <!-- SIDEBAR (Desktop) / Índice colapsable (Móvil) -->
+                <aside class="lesson-sidebar" id="lessonSidebar">
+                    <div class="sidebar-sticky">
+                        <button class="sidebar-toggle" id="sidebarToggle">
+                            📑 Índice de contenido
+                        </button>
+                        
+                        <div class="sidebar-content" id="sidebarContent">
+                            <h3 class="sidebar-title">En esta lección</h3>
+                            <nav class="table-of-contents" id="tableOfContents">
+                                <a href="#introduccion" class="toc-link active">Introducción</a>
+                                <a href="#ciudadanos" class="toc-link">Para Ciudadanos</a>
+                                <a href="#estudiantes" class="toc-link">Para Estudiantes</a>
+                                <a href="#trabajadores" class="toc-link">Para Trabajadores</a>
+                                <a href="#emprendedores" class="toc-link">Para Emprendedores</a>
+                                <a href="#empresas" class="toc-link">Para Empresas</a>
+                                <a href="#docentes" class="toc-link">Para Docentes</a>
+                                <a href="#recursos-apoyo" class="toc-link">Recursos de Apoyo</a>
+                                <a href="#siguiente" class="toc-link">Siguiente Paso</a>
+                            </nav>
+                            
+                            <div class="sidebar-related">
+                                <h4>Lecciones relacionadas</h4>
+                                <a href="leccion-casos-uso.html" class="related-link">
+                                    🏢 Casos de Uso en Colombia
+                                </a>
+                                <a href="leccion-4-pilares-ia.html" class="related-link">
+                                    🤖 Los 4 Pilares de la IA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- CONTENIDO DEL ARTÍCULO -->
+                <article class="lesson-content" id="lessonContent">
+                    
+                    <!-- Introducción -->
+                    <section id="introduccion">
+                        <p class="lead-paragraph">
+                            La transformación digital no es responsabilidad solo del gobierno. Cada persona, en su rol, tiene un papel fundamental en este cambio. Ya seas estudiante, trabajador, emprendedor o simplemente un ciudadano digital, hay formas concretas de participar y contribuir al futuro digital de Colombia.
+                        </p>
+                        
+                        <p>
+                            Esta lección te muestra exactamente cómo TÚ puedes ser parte de la transformación digital y aprovechar las oportunidades que te ofrece.
+                        </p>
+
+                        <div class="intro-highlight">
+                            <div class="highlight-box">
+                                <span class="highlight-icon">💡</span>
+                                <div class="highlight-text">
+                                    <strong>Idea Clave:</strong> No necesitas ser un experto en tecnología para participar. La transformación digital es para todos, en todos los niveles.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Para Ciudadanos -->
+                    <section id="ciudadanos" class="role-section">
+                        <h2>👥 Para Ciudadanos: Tu Rol en lo Digital</h2>
+
+                        <div class="role-intro">
+                            <p>
+                                Como ciudadano, tu participación es esencial. Usas servicios digitales diariamente y tienes el poder de exigir mejores servicios, denunciar abusos y educar a otros.
+                            </p>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>1. Aprende Competencias Digitales Básicas</h3>
+                                <span class="difficulty-badge">Fácil</span>
+                            </div>
+                            <p class="action-description">
+                                Domina las herramientas digitales que usas a diario.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Pasos concretos:</h4>
+                                <ul>
+                                    <li>Inscríbete en <strong>Ciudadano Digital</strong> (www.ciudadanodigital.gov.co) - Cursos gratis</li>
+                                    <li>Aprende a usar: Email, WhatsApp, banca móvil, redes sociales</li>
+                                    <li>Busca <strong>Puntos Vive Digital</strong> en tu ciudad para capacitación presencial</li>
+                                    <li>Dedica 30 minutos a la semana a aprender algo nuevo</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Ahorro de tiempo, dinero y acceso a nuevas oportunidades
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>2. Usa Servicios Digitales Oficiales</h3>
+                                <span class="difficulty-badge">Fácil</span>
+                            </div>
+                            <p class="action-description">
+                                Demuestra demanda por servicios en línea y impulsa a las instituciones a mejorar.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Pasos concretos:</h4>
+                                <ul>
+                                    <li>Realiza un trámite que antes hacías presencial (<strong>Gobierno en Línea</strong>)</li>
+                                    <li>Paga servicios (agua, luz, internet) por app o PSE</li>
+                                    <li>Consulta información pública en <strong>Datos Abiertos</strong> (www.datos.gov.co)</li>
+                                    <li>Reporta problemas digitales a través de canales oficiales</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Trámites más rápidos, menos costos, apoyas la innovación pública
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>3. Protégete y Protege a Otros</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Desarrolla hábitos seguros y educa a tu familia sobre ciberseguridad.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Pasos concretos:</h4>
+                                <ul>
+                                    <li>Crea contraseñas seguras (12+ caracteres, mayúsculas, números, símbolos)</li>
+                                    <li>Activa autenticación de dos factores en cuentas importantes</li>
+                                    <li>Enseña a padres/abuelos a identificar phishing</li>
+                                    <li>Denuncia delitos cibernéticos en <strong>CAI Virtual</strong> (caivirtual.policia.gov.co)</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Protege tu identidad digital y la de tu comunidad
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>4. Participa en Consultas y Decisiones Públicas</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Tu voz cuenta en las decisiones sobre transformación digital.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Pasos concretos:</h4>
+                                <ul>
+                                    <li>Participa en <strong>consultas ciudadanas</strong> sobre políticas digitales</li>
+                                    <li>Comenta en <strong>Datos Abiertos</strong> sobre qué información necesitas</li>
+                                    <li>Reporta a autoridades (SIC, CAI) si ves violación de derechos digitales</li>
+                                    <li>Únete a comunidades civiles que monitorean gobierno digital</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Servicios digitales mejores y más alineados con necesidades reales
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Para Estudiantes -->
+                    <section id="estudiantes" class="role-section">
+                        <h2>🎓 Para Estudiantes: Construye Tu Futuro Digital</h2>
+
+                        <div class="role-intro">
+                            <p>
+                                Los estudiantes son el futuro de la transformación digital. Tienes todo el tiempo para prepararte y convertirte en protagonista de la innovación.
+                            </p>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>1. Estudia Carreras del Futuro</h3>
+                                <span class="difficulty-badge">Planificación</span>
+                            </div>
+                            <p class="action-description">
+                                Elige una carrera que esté a la vanguardia de la transformación digital.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Carreras recomendadas:</h4>
+                                <ul>
+                                    <li><strong>Programación/Desarrollo:</strong> Ingeniería de sistemas, desarrollo full-stack</li>
+                                    <li><strong>Datos:</strong> Ciencia de datos, análisis de datos, Business Intelligence</li>
+                                    <li><strong>Seguridad:</strong> Ciberseguridad, ethical hacking</li>
+                                    <li><strong>IA:</strong> Machine Learning, Deep Learning, IA aplicada</li>
+                                    <li><strong>Especialización:</strong> IA en salud, IA en educación, IA en agricultura</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Salarios altos, demanda laboral, impacto social
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>2. Aprende Programación por Tu Cuenta</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                No esperes a la universidad. Empieza ahora con recursos gratuitos.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Pasos concretos:</h4>
+                                <ul>
+                                    <li>Elige tu primer lenguaje: <strong>Python</strong> (recomendado para IA/datos)</li>
+                                    <li>Plataformas gratis:
+                                        <ul>
+                                            <li>Codecademy (codecademy.com)</li>
+                                            <li>Khan Academy (khanacademy.org)</li>
+                                            <li>YouTube (canales en español)</li>
+                                            <li>freeCodeCamp.org</li>
+                                        </ul>
+                                    </li>
+                                    <li>Crea proyectos pequeños: calculadora, juego, app simple</li>
+                                    <li>Comparte tu código en <strong>GitHub</strong> (portfolio profesional)</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Portafolio profesional, ofertas laborales tempranas
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>3. Participa en Hackathons y Competencias</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Aprende en equipo, compite y gana premios mientras innovas.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Pasos concretos:</h4>
+                                <ul>
+                                    <li>Busca hackathons en tu ciudad (universidades, MinTIC)</li>
+                                    <li>Participa en desafíos online:
+                                        <ul>
+                                            <li>Apps.co (competencias de startups)</li>
+                                            <li>Kaggle.com (competencias de datos)</li>
+                                            <li>HackerRank (programación)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Forma equipo con compañeros</li>
+                                    <li>Crea soluciones a problemas reales colombianos</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Experiencia real, networking, visibilidad, premios en dinero
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>4. Obtén Certificaciones Reconocidas</h3>
+                                <span class="difficulty-badge">Avanzado</span>
+                            </div>
+                            <p class="action-description">
+                                Demuestra tus competencias con certificados valorados globalmente.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Certificaciones reconocidas:</h4>
+                                <ul>
+                                    <li><strong>Google Cloud:</strong> Cloud Associate Engineer</li>
+                                    <li><strong>AWS:</strong> AWS Certified Cloud Practitioner</li>
+                                    <li><strong>Microsoft:</strong> Azure Fundamentals</li>
+                                    <li><strong>Linux:</strong> Linux Foundation Certified</li>
+                                    <li><strong>Seguridad:</strong> CompTIA Security+</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Ofertas laborales internacionales, salarios premium
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Para Trabajadores -->
+                    <section id="trabajadores" class="role-section">
+                        <h2>💼 Para Trabajadores: Actualízate y Avanza</h2>
+
+                        <div class="role-intro">
+                            <p>
+                                Seas profesional experimentado o estés comenzando tu carrera, la actualización continua es clave para no quedarte atrás en la transformación digital.
+                            </p>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>1. Desarrolla Competencias Digitales en Tu Área</h3>
+                                <span class="difficulty-badge">Fácil-Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Aprende herramientas digitales específicas de tu profesión.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Según tu área:</h4>
+                                <ul>
+                                    <li><strong>Finanzas:</strong> Tableau, Power BI, análisis financiero con Python</li>
+                                    <li><strong>Marketing:</strong> Google Analytics, SEO, marketing automation (HubSpot)</li>
+                                    <li><strong>RRHH:</strong> Gestión de talento en LinkedIn, análisis de datos de empleados</li>
+                                    <li><strong>Manufactura:</strong> IoT, automatización, control de calidad con IA</li>
+                                    <li><strong>Salud:</strong> Telemedicina, registros digitales, diagnóstico asistido</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Mejor desempeño laboral, ascensos más rápidos
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>2. Propón Proyectos de Transformación Digital</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Identifica procesos que pueden automatizarse con tecnología.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Pasos concretos:</h4>
+                                <ul>
+                                    <li>Analiza tu trabajo diario: ¿Qué tareas son repetitivas?</li>
+                                    <li>Busca soluciones: ¿Qué herramienta digital lo automatiza?</li>
+                                    <li>Prepara propuesta: Problema → Solución → ROI (retorno de inversión)</li>
+                                    <li>Presenta a tu jefe/gerente con datos concretos</li>
+                                    <li>Lidera el cambio: Capacita al equipo en la nueva herramienta</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Reconocimiento laboral, liderazgo, innovación dentro de la empresa
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>3. Realiza Capacitaciones Certificadas</h3>
+                                <span class="difficulty-badge">Intermedio-Avanzado</span>
+                            </div>
+                            <p class="action-description">
+                                Invierte en formación formal para acelerar tu carrera.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Opciones de formación:</h4>
+                                <ul>
+                                    <li><strong>Cursos Online:</strong> Coursera, Udemy, LinkedIn Learning (busca descuentos)</li>
+                                    <li><strong>Bootcamps:</strong> Intensivos de 6-12 semanas (Data Science, UX, DevOps)</li>
+                                    <li><strong>Diplomados:</strong> Universidad (IA, transformación digital, etc.)</li>
+                                    <li><strong>Maestrías:</strong> Si quieres especializarte profundamente</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Salarios 30-50% más altos, cambio de carrera, emprendimiento
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>4. Busca Nuevas Oportunidades Laborales</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Aprovecha la demanda por talento digital en Colombia.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Pasos concretos:</h4>
+                                <ul>
+                                    <li>Actualiza tu <strong>LinkedIn</strong> con competencias digitales</li>
+                                    <li>Busca empleo en plataformas especializadas:
+                                        <ul>
+                                            <li>Computrabajo</li>
+                                            <li>LinkedIn Jobs</li>
+                                            <li>Indeed</li>
+                                            <li>InfoJobs</li>
+                                        </ul>
+                                    </li>
+                                    <li>Considera trabajo remoto (salarios globales en pesos colombianos)</li>
+                                    <li>Negocia salario basado en mercado actual</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Mejor salario, estabilidad laboral, oportunidades globales
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Para Emprendedores -->
+                    <section id="emprendedores" class="role-section">
+                        <h2>🚀 Para Emprendedores: Crea Soluciones Digitales</h2>
+
+                        <div class="role-intro">
+                            <p>
+                                Si tienes una idea, Colombia te ofrece recursos para convertirla en negocio digital. El gobierno y el ecosistema de startups están listos para apoyarte.
+                            </p>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>1. Identifica un Problema para Resolver</h3>
+                                <span class="difficulty-badge">Fácil</span>
+                            </div>
+                            <p class="action-description">
+                                Busca ineficiencias que la tecnología pueda solucionar.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Estrategia de ideación:</h4>
+                                <ul>
+                                    <li>Observa tu comunidad: ¿Qué falta digitalmente?</li>
+                                    <li>Habla con personas: ¿Qué frustraciones digitales tienen?</li>
+                                    <li>Busca nichos locales: Agricultura, salud rural, comercio pequeño</li>
+                                    <li>Valida tu idea: ¿Alguien pagaría por esto?</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Ejemplo:</strong> App que conecta agricultores directamente con consumidores, Plataforma de telemedicina rural, Sistema de gestión para pequeñas tiendas
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>2. Accede a Recursos de Apoyo del Gobierno</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Usa programas oficiales para financiar y desarrollar tu startup.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Programas clave:</h4>
+                                <ul>
+                                    <li><strong>Apps.co (MinTIC):</strong>
+                                        <ul>
+                                            <li>Financiación: Desde $50M pesos</li>
+                                            <li>Mentoría especializada</li>
+                                            <li>Conexión con inversores</li>
+                                            <li>www.apps.co</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>iNNpulsa:</strong>
+                                        <ul>
+                                            <li>Créditos blandos</li>
+                                            <li>Capital semilla</li>
+                                            <li>Programas de aceleración</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Ruta N (Medellín):</strong> Ecosistema de innovación</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Financiación sin muchas garantías, mentoría gratis, validación de idea
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>3. Crea tu Prototipo o MVP (Producto Mínimo Viable)</h3>
+                                <span class="difficulty-badge">Avanzado</span>
+                            </div>
+                            <p class="action-description">
+                                Construye una versión simple de tu idea para validarla en el mercado.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Pasos de desarrollo:</h4>
+                                <ul>
+                                    <li><strong>Sin presupuesto:</strong>
+                                        <ul>
+                                            <li>Herramientas no-code: Webflow, Bubble, Airtable</li>
+                                            <li>YouTube: Aprende a crear tu MVP</li>
+                                            <li>Comunidades: Python Colombia, React Colombia</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Con presupuesto pequeño ($2-10M):</strong>
+                                        <ul>
+                                            <li>Contrata freelancers en Upwork o plataformas locales</li>
+                                            <li>Únete a aceleradoras que proveen talento</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Validación:</strong> Prueba con 10-20 usuarios reales</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Aprendes rápido, gastas poco, obtienes feedback real
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>4. Crece y Escala Tu Negocio</h3>
+                                <span class="difficulty-badge">Avanzado</span>
+                            </div>
+                            <p class="action-description">
+                                De startup a empresa, de Colombia a Latinoamérica.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Estrategia de crecimiento:</h4>
+                                <ul>
+                                    <li><strong>Fase 1 (Tú solo):</strong> 0-$100K ingresos/mes</li>
+                                    <li><strong>Fase 2 (Equipo pequeño):</strong> Contrata 2-3 personas</li>
+                                    <li><strong>Fase 3 (Equipo):</strong> 10+ personas, procesos formales</li>
+                                    <li><strong>Fase 4 (Escala):</strong> Inversionistas, mercados internacionales</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Salida rentable (venta a otra empresa o IPO)
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Para Empresas -->
+                    <section id="empresas" class="role-section">
+                        <h2>🏢 Para Empresas: Transforma Tu Negocio</h2>
+
+                        <div class="role-intro">
+                            <p>
+                                Independientemente de tu tamaño, la transformación digital es crítica para competir. El CONPES 3975 incluye incentivos y apoyo para empresas que innoven.
+                            </p>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>1. Diagnóstica tu Madurez Digital</h3>
+                                <span class="difficulty-badge">Fácil</span>
+                            </div>
+                            <p class="action-description">
+                                Evalúa en qué punto de la transformación está tu empresa.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Preguntas de autodiagnóstico:</h4>
+                                <ul>
+                                    <li>¿Tienes página web o e-commerce? ¿Está actualizada?</li>
+                                    <li>¿Usas herramientas cloud? (Google Workspace, Microsoft 365)</li>
+                                    <li>¿Tienes datos digitales organizados? (CRM, ERP)</li>
+                                    <li>¿Tus procesos están automatizados?</li>
+                                    <li>¿Tengo personal capacitado en tecnología?</li>
+                                    <li>¿Recopilo y analizo datos de negocio?</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Resultado:</strong> Mapa de fortalezas y debilidades digitales
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>2. Crea una Estrategia Digital</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Define objetivos claros y un plan para lograrlos.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Elementos de la estrategia:</h4>
+                                <ul>
+                                    <li><strong>Visión:</strong> ¿Cómo será mi empresa en 3-5 años?</li>
+                                    <li><strong>Prioridades:</strong> ¿Qué transformo primero?</li>
+                                    <li><strong>Presupuesto:</strong> ¿Cuánto invierto?</li>
+                                    <li><strong>Equipo:</strong> ¿Quién lidera? ¿Necesito contratar?</li>
+                                    <li><strong>Métricas:</strong> ¿Cómo mido el éxito?</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Plan claro que evita desperdiciar recursos
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>3. Implementa Herramientas Digitales</h3>
+                                <span class="difficulty-badge">Intermedio-Avanzado</span>
+                            </div>
+                            <p class="action-description">
+                                Adopta tecnologías que mejoren tu operación.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Herramientas según tamaño:</h4>
+                                <ul>
+                                    <li><strong>Pequeña empresa:</strong>
+                                        <ul>
+                                            <li>Página web (WordPress, Wix)</li>
+                                            <li>E-commerce (Shopify)</li>
+                                            <li>Email marketing (Mailchimp gratis)</li>
+                                            <li>Facturación electrónica (ANDES, Loom)</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Mediana empresa:</strong>
+                                        <ul>
+                                            <li>CRM (Salesforce, HubSpot)</li>
+                                            <li>ERP (SAP, Microsoft Dynamics)</li>
+                                            <li>Cloud (AWS, Google Cloud, Azure)</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Grande empresa:</strong>
+                                        <ul>
+                                            <li>IA/ML para optimizar procesos</li>
+                                            <li>Business Intelligence avanzado</li>
+                                            <li>Automatización robótica (RPA)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Operaciones más eficientes, costos menores, servicio mejorado
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>4. Capacita Tu Equipo Internamente</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                El cambio tecnológico requiere que tu gente esté lista.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Plan de capacitación:</h4>
+                                <ul>
+                                    <li><strong>Identificación:</strong> ¿Quién necesita qué formación?</li>
+                                    <li><strong>Cursos internos:</strong> Enseña tu nuevo sistema</li>
+                                    <li><strong>Cursos externos:</strong> Manda a líderes a certificaciones</li>
+                                    <li><strong>Incentivos:</strong> Bonos por adquisición de competencias</li>
+                                    <li><strong>Cultura:</strong> Celebra innovación y experimentos</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Adopción más rápida, menor resistencia al cambio
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Para Docentes -->
+                    <section id="docentes" class="role-section">
+                        <h2>👨‍🏫 Para Docentes: Enseña lo Digital</h2>
+
+                        <div class="role-intro">
+                            <p>
+                                Los educadores tienen un rol central: preparan a la próxima generación para la transformación digital. Tu participación multiplica el impacto.
+                            </p>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>1. Actualiza Tu Formación Pedagógica</h3>
+                                <span class="difficulty-badge">Fácil</span>
+                            </div>
+                            <p class="action-description">
+                                Aprende a enseñar tecnología de forma efectiva.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Recursos disponibles:</h4>
+                                <ul>
+                                    <li><strong>MinEducación:</strong> Programas de capacitación docente en TIC</li>
+                                    <li><strong>Google for Education:</strong> Formación gratuita (google.com/educator)</li>
+                                    <li><strong>Microsoft Education:</strong> Programa de docentes</li>
+                                    <li><strong>Cursos online:</strong> Coursera (muchos cursos de educación gratis)</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Herramientas para enseñar mejor, certificación profesional
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>2. Integra Competencias Digitales en Tu Currículo</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Incorpora habilidades digitales transversales en todas tus asignaturas.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Ejemplos de integración:</h4>
+                                <ul>
+                                    <li><strong>Matemáticas:</strong> Análisis de datos, visualización con Python</li>
+                                    <li><strong>Ciencias:</strong> Simulaciones, IoT, recolección de datos</li>
+                                    <li><strong>Lenguaje:</strong> Producción multimedia, redacción digital</li>
+                                    <li><strong>Historia:</strong> Busqueda de información, verificación de fuentes</li>
+                                    <li><strong>Todas:</strong> Ciberseguridad, privacidad, ética digital</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Estudiantes más preparados, aprendizaje más relevante
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>3. Usa Plataformas Educativas Modernas</h3>
+                                <span class="difficulty-badge">Fácil-Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Aplica nuevas metodologías y herramientas en clase.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Herramientas recomendadas:</h4>
+                                <ul>
+                                    <li><strong>Aulas virtuales:</strong> Google Classroom, Moodle (gratis para colegios)</li>
+                                    <li><strong>Colaboración:</strong> Google Docs, Office 365</li>
+                                    <li><strong>Gamificación:</strong> Kahoot, Quizizz</li>
+                                    <li><strong>Crear contenido:</strong> Canva, PowToon, Prezi</li>
+                                    <li><strong>Videoconferencias:</strong> Google Meet, Zoom</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Clases más dinámicas, mayor participación, educación híbrida
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-header">
+                                <h3>4. Enseña Seguridad Digital y Ética</h3>
+                                <span class="difficulty-badge">Intermedio</span>
+                            </div>
+                            <p class="action-description">
+                                Prepara ciudadanos digitales responsables y seguros.
+                            </p>
+                            <div class="action-steps">
+                                <h4>Temas a incluir:</h4>
+                                <ul>
+                                    <li>Contraseñas seguras y autenticación</li>
+                                    <li>Phishing, malware, fraude (cómo identificar)</li>
+                                    <li>Privacidad digital, derechos de datos personales</li>
+                                    <li>Ciberacoso, riesgos en redes sociales</li>
+                                    <li>Ética en IA, sesgo algorítmico</li>
+                                    <li>Dónde denunciar delitos cibernéticos</li>
+                                </ul>
+                            </div>
+                            <div class="action-result">
+                                <strong>Beneficio:</strong> Estudiantes protegidos, conscientes, ciudadanos digitales seguros
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Recursos de Apoyo -->
+                    <section id="recursos-apoyo">
+                        <h2>🎯 Recursos de Apoyo para Todos</h2>
+
+                        <p>
+                            Independientemente de tu rol, estos recursos te ayudarán:
+                        </p>
+
+                        <div class="resources-grid">
+                            <div class="resource-box">
+                                <h3>📚 Formación Gratuita</h3>
+                                <ul>
+                                    <li><strong>Ciudadano Digital:</strong> www.ciudadanodigital.gov.co</li>
+                                    <li><strong>Google Actívate:</strong> learndigital.withgoogle.com/activate</li>
+                                    <li><strong>Coursera:</strong> www.coursera.org (muchos gratis)</li>
+                                    <li><strong>Khan Academy:</strong> es.khanacademy.org</li>
+                                    <li><strong>freeCodeCamp:</strong> www.freecodecamp.org</li>
+                                </ul>
+                            </div>
+
+                            <div class="resource-box">
+                                <h3>💼 Emprendimiento y Financiación</h3>
+                                <ul>
+                                    <li><strong>Apps.co:</strong> www.apps.co (MinTIC)</li>
+                                    <li><strong>iNNpulsa:</strong> www.innpulsacolombia.com</li>
+                                    <li><strong>Ruta N:</strong> www.rutanmedellin.org</li>
+                                    <li><strong>Asea Colombia:</strong> Asociación startup</li>
+                                </ul>
+                            </div>
+
+                            <div class="resource-box">
+                                <h3>🛡️ Seguridad Digital</h3>
+                                <ul>
+                                    <li><strong>CAI Virtual:</strong> caivirtual.policia.gov.co</li>
+                                    <li><strong>SIC (Protección datos):</strong> www.sic.gov.co</li>
+                                    <li><strong>Centro Cibernético Policial:</strong> caip.policia.gov.co</li>
+                                </ul>
+                            </div>
+
+                            <div class="resource-box">
+                                <h3>🌐 Información Oficial</h3>
+                                <ul>
+                                    <li><strong>MinTIC:</strong> www.mintic.gov.co</li>
+                                    <li><strong>DNP (CONPES):</strong> www.dnp.gov.co</li>
+                                    <li><strong>Datos Abiertos:</strong> www.datos.gov.co</li>
+                                    <li><strong>Gobierno en Línea:</strong> gobiernodigital.mintic.gov.co</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CTA QUIZ -->
+                    <section class="lesson-cta-section">
+                        <h3>¿Identificaste tu rol en la transformación digital?</h3>
+                        <p>Ahora que sabes cómo participar, pon a prueba tu conocimiento con nuestro quiz.</p>
+                        <a href="practica.html" class="btn btn-accent btn-large">Hacer el Quiz →</a>
+                    </section>
+
+                    <!-- Siguiente Paso -->
+                    <section id="siguiente">
+                        <h2>Siguiente Paso: Tu Acción Hoy</h2>
+                        <p>
+                            No esperes mañana. La transformación digital requiere acción ahora. Elige una de las acciones concretas que viste en esta lección y hazla HOY.
+                        </p>
+                        
+                        <div class="action-commitment">
+                            <h3>Mi Compromiso Hoy:</h3>
+                            <p>Voy a:</p>
+                            <ul class="commitment-list">
+                                <li>☑️ Cambiar mis contraseñas débiles a contraseñas seguras</li>
+                                <li>☑️ Inscribirme en un curso online de mi área</li>
+                                <li>☑️ Hacer un trámite online que antes hacía presencial</li>
+                                <li>☑️ Aprender una herramienta digital nueva</li>
+                                <li>☑️ Enseñar a un familiar a usar algo digital</li>
+                                <li>☑️ Explorar una oportunidad de emprendimiento digital</li>
+                            </ul>
+                        </div>
+
+                        <div class="next-lesson-card">
+                            <div class="next-lesson-content">
+                                <span class="next-lesson-label">Recapitula lo aprendido</span>
+                                <h3>✅ Resumen: Los 4 Pilares de la IA</h3>
+                                <p>Repasa los fundamentos de la Inteligencia Artificial en Colombia.</p>
+                            </div>
+                            <a href="leccion-4-pilares-ia.html" class="btn btn-primary">Revisar →</a>
+                        </div>
+                    </section>
+
+                </article>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER DE LECCIÓN -->
+    <footer class="lesson-footer">
+        <div class="container">
+            
+            <!-- Navegación entre lecciones -->
+            <div class="lesson-navigation">
+                <a href="aprende.html" class="nav-lesson-btn nav-prev">
+                    ← Volver a Aprende
+                </a>
+                <a href="aprende.html" class="nav-lesson-btn nav-next">
+                    Explorar más lecciones →
+                </a>
+            </div>
+
+            <!-- Compartir en redes -->
+            <div class="lesson-share">
+                <span class="share-label">Compartir esta lección:</span>
+                <div class="share-buttons">
+                    <button class="share-btn share-twitter" onclick="shareOnTwitter()">
+                        🐦 Twitter
+                    </button>
+                    <button class="share-btn share-facebook" onclick="shareOnFacebook()">
+                        📘 Facebook
+                    </button>
+                    <button class="share-btn share-whatsapp" onclick="shareOnWhatsApp()">
+                        💬 WhatsApp
+                    </button>
+                    <button class="share-btn share-copy" onclick="copyLink()">
+                        🔗 Copiar link
+                    </button>
+                </div>
+            </div>
+
+            <!-- Recursos adicionales -->
+            <div class="lesson-resources">
+                <h4>📚 Recursos Adicionales</h4>
+                <ul>
+                    <li><a href="recursos.html" target="_blank">📄 Leer CONPES 3975 completo (PDF)</a></li>
+                    <li><a href="recursos.html" target="_blank">📄 Leer CONPES 4144 completo (PDF)</a></li>
+                    <li><a href="https://www.mintic.gov.co" target="_blank">🌐 Sitio oficial MinTIC</a></li>
+                    <li><a href="https://www.dnp.gov.co" target="_blank">🏛️ Departamento Nacional de Planeación</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- FOOTER GENERAL -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="aprende.html">Aprende</a></li>
+                        <li><a href="practica.html">Practica</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="acerca-de.html">Acerca de</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="https://www.umng.edu.co" target="_blank">Universidad Militar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AR Bot | CONPES 3975 y 3995</p>
+                <p>Hecho con ❤️ por Brian, Santiago, Juan y David</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/leccion.js"></script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escanea AR | AR Bot</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/escanea-ar.css">
+    
+    <!-- AR.js Library -->
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <img src="images/Logo.png" alt="AR Bot Logo" class="logo-img">
+                    <span class="logo-text">AR BOT</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="aprende.html" class="nav-link">Aprende</a></li>
+                <li><a href="practica.html" class="nav-link">Practica</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 9.1 PANTALLA DE BIENVENIDA -->
+    <section class="welcome-screen" id="welcomeScreen">
+        <div class="container">
+            <div class="welcome-content">
+                
+                <!-- Imagen/GIF -->
+                <div class="welcome-image">
+                    <img src="images/Scanear.jpeg" alt="Persona escaneando afiche" class="scan-illustration">
+                </div>
+                
+                <!-- Texto Principal -->
+                <div class="welcome-text">
+                    <h1 class="welcome-title">Escanea un Afiche AR Bot</h1>
+                    <p class="welcome-description">
+                        Experimenta la realidad aumentada y conoce a AR Bot en 3D
+                    </p>
+                    
+                    <!-- Pasos -->
+                    <div class="steps-list">
+                        <div class="step-item">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h3 class="step-title">Permite acceso a la cámara</h3>
+                                <p class="step-description">Tu navegador pedirá permiso para usar la cámara</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h3 class="step-title">Apunta al afiche de CONPES</h3>
+                                <p class="step-description">Centra el afiche en la pantalla</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h3 class="step-title">¡AR Bot aparecerá en 3D!</h3>
+                                <p class="step-description">Podrás ver el modelo interactivo sobre el afiche</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botón Principal -->
+                    <button class="btn btn-primary btn-large" id="activateCameraBtn">
+                        <span class="btn-icon">📷</span>
+                        <span>Activar Cámara</span>
+                    </button>
+                    
+                    <!-- 9.4 NO TIENES UN AFICHE -->
+                    <div class="no-poster-link">
+                        <a href="#noPoster" id="noPosterLink">
+                            ¿No tienes un afiche? Consigue uno aquí →
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 9.2 VISTA DE CÁMARA ACTIVA -->
+    <section class="ar-camera-view" id="arCameraView" style="display: none;">
+        
+        <!-- Botón Cerrar -->
+        <button class="close-ar-btn" id="closeArBtn">
+            <span>✕</span>
+        </button>
+        
+        <!-- Instrucciones Overlay -->
+        <div class="ar-overlay">
+            <div class="ar-instructions">
+                <div class="scanning-animation">
+                    <div class="scan-frame"></div>
+                </div>
+                <p class="instruction-text">Apunta al afiche de AR Bot</p>
+            </div>
+        </div>
+        
+        <!-- AR Scene -->
+        <a-scene
+            id="arScene"
+            embedded
+            arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+            vr-mode-ui="enabled: false"
+            renderer="logarithmicDepthBuffer: true; precision: medium;">
+            
+            <!-- Cámara AR -->
+            <a-marker preset="hiro" id="marker">
+                <!-- Modelo 3D de AR Bot (simple con primitivas) -->
+                <a-entity id="arBot" position="0 0.5 0">
+                    <!-- Cuerpo -->
+                    <a-cylinder 
+                        position="0 0 0" 
+                        radius="0.3" 
+                        height="0.8" 
+                        color="#7c3aed"
+                        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear">
+                    </a-cylinder>
+                    
+                    <!-- Cabeza -->
+                    <a-box 
+                        position="0 0.6 0" 
+                        width="0.5" 
+                        height="0.4" 
+                        depth="0.5" 
+                        color="#3b82f6"
+                        animation="property: position; to: 0 0.7 0; dir: alternate; loop: true; dur: 1000; easing: easeInOutSine">
+                    </a-box>
+                    
+                    <!-- Ojos -->
+                    <a-sphere position="-0.1 0.65 0.26" radius="0.05" color="#ffffff"></a-sphere>
+                    <a-sphere position="0.1 0.65 0.26" radius="0.05" color="#ffffff"></a-sphere>
+                    <a-sphere position="-0.1 0.65 0.27" radius="0.03" color="#000000"></a-sphere>
+                    <a-sphere position="0.1 0.65 0.27" radius="0.03" color="#000000"></a-sphere>
+                    
+                    <!-- Antena -->
+                    <a-cylinder 
+                        position="0 0.85 0" 
+                        radius="0.02" 
+                        height="0.15" 
+                        color="#00cc66">
+                    </a-cylinder>
+                    <a-sphere position="0 0.93 0" radius="0.05" color="#00cc66"></a-sphere>
+                    
+                    <!-- Brazos -->
+                    <a-cylinder 
+                        position="-0.4 0.2 0" 
+                        radius="0.08" 
+                        height="0.5" 
+                        color="#5b21b6"
+                        rotation="0 0 45">
+                    </a-cylinder>
+                    <a-cylinder 
+                        position="0.4 0.2 0" 
+                        radius="0.08" 
+                        height="0.5" 
+                        color="#5b21b6"
+                        rotation="0 0 -45">
+                    </a-cylinder>
+                </a-entity>
+            </a-marker>
+            
+            <a-entity camera></a-entity>
+        </a-scene>
+        
+        <!-- 9.3 DETECCIÓN DE MARCADOR -->
+        <div class="marker-detected" id="markerDetected" style="display: none;">
+            <div class="detected-content">
+                <div class="detected-icon">✓</div>
+                <p class="detected-text">¡Marcador Detectado!</p>
+                
+                <div class="ar-actions">
+                    <button class="btn btn-primary" id="viewLessonBtn">
+                        <span class="btn-icon">📚</span>
+                        Ver Lección Completa
+                    </button>
+                    <button class="btn btn-secondary" id="capturePhotoBtn">
+                        <span class="btn-icon">📸</span>
+                        Capturar Foto
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- 9.4 SECCIÓN NO TIENES AFICHE -->
+    <section class="no-poster-section" id="noPosterSection" style="display: none;">
+        <div class="container">
+            
+            <button class="back-btn" id="backToWelcome">
+                ← Volver
+            </button>
+            
+            <div class="no-poster-content">
+                
+                <h2 class="section-title">
+                    <span class="title-icon">📍</span>
+                    ¿Dónde Conseguir un Afiche AR Bot?
+                </h2>
+                
+                <!-- Opciones -->
+                <div class="poster-options-grid">
+                    
+                    <!-- Opción 1: Descargar PDF -->
+                    <div class="poster-option-card">
+                        <div class="option-icon">📄</div>
+                        <h3 class="option-title">Descargar e Imprimir</h3>
+                        <p class="option-description">
+                            Descarga el afiche en PDF y llévalo a imprimir en tamaño A4 o carta
+                        </p>
+                        <a href="pdfs/afiche-ar-bot.pdf" download class="btn btn-primary">
+                            <span class="btn-icon">⬇️</span>
+                            Descargar PDF
+                        </a>
+                        
+                        <div class="option-specs">
+                            <p><strong>Especificaciones:</strong></p>
+                            <ul>
+                                <li>Tamaño: A4 o Carta</li>
+                                <li>Calidad: 300 DPI</li>
+                                <li>Color: Sí (requerido)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Opción 2: Ver en Pantalla -->
+                    <div class="poster-option-card">
+                        <div class="option-icon">🖥️</div>
+                        <h3 class="option-title">Ver en Pantalla</h3>
+                        <p class="option-description">
+                            Muestra el marcador en otra pantalla o dispositivo
+                        </p>
+                        <button class="btn btn-secondary" id="showMarkerBtn">
+                            <span class="btn-icon">👁️</span>
+                            Ver Marcador
+                        </button>
+                        
+                        <div class="option-note">
+                            <p>💡 <strong>Tip:</strong> Abre esta página en otro dispositivo y muestra el marcador en pantalla completa</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Opción 3: Ubicaciones Físicas -->
+                    <div class="poster-option-card full-width">
+                        <div class="option-icon">📍</div>
+                        <h3 class="option-title">Ubicaciones con Afiches</h3>
+                        <p class="option-description">
+                            Encuentra afiches AR Bot en estos lugares:
+                        </p>
+                        
+                        <div class="locations-list">
+                            <div class="location-item">
+                                <span class="location-icon">🏫</span>
+                                <div class="location-info">
+                                    <h4>Universidad Militar Nueva Granada</h4>
+                                    <p>Campus Cajicá - Edificio C, Facultad de Ingeniería</p>
+                                </div>
+                            </div>
+                            
+                            <div class="location-item">
+                                <span class="location-icon">🏢</span>
+                                <div class="location-info">
+                                    <h4>MinTIC - Bogotá</h4>
+                                    <p>Edificio Murillo Toro - Carrera 8a #12A-14</p>
+                                </div>
+                            </div>
+                            
+                            <div class="location-item">
+                                <span class="location-icon">📚</span>
+                                <div class="location-info">
+                                    <h4>Bibliotecas Públicas</h4>
+                                    <p>Red de bibliotecas de Bogotá - Zona de tecnología</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Instrucciones de Impresión -->
+                <div class="print-instructions">
+                    <h3 class="instructions-title">📋 Instrucciones de Impresión</h3>
+                    <ol class="instructions-list">
+                        <li>Descarga el PDF del afiche</li>
+                        <li>Imprímelo en papel blanco, tamaño A4 o carta</li>
+                        <li>Asegúrate de que la impresión sea <strong>a color</strong> y de buena calidad</li>
+                        <li>No modifiques el tamaño del marcador (debe ser exacto)</li>
+                        <li>Coloca el afiche en una superficie plana con buena iluminación</li>
+                    </ol>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE MARCADOR EN PANTALLA -->
+    <div class="marker-modal" id="markerModal" style="display: none;">
+        <div class="marker-modal-content">
+            <button class="modal-close" id="closeMarkerModal">✕</button>
+            <h3 class="modal-title">Marcador AR Bot</h3>
+            <p class="modal-description">Escanea este marcador con otro dispositivo</p>
+            
+            <div class="marker-display">
+                <!-- Aquí iría la imagen del marcador HIRO o tu marcador personalizado -->
+                <img src="images/hiro-marker.png" alt="Marcador AR" class="marker-image">
+            </div>
+            
+            <button class="btn btn-secondary" id="fullscreenMarkerBtn">
+                Ver en Pantalla Completa
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/Logo.png" alt="AR Bot" class="footer-logo-img">
+                        <span class="footer-logo-text">AR BOT</span>
+                    </div>
+                    <p class="footer-description">
+                        Tu asistente educativo sobre Transformación y Seguridad Digital
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Navegar</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="aprende.html">Aprende</a></li>
+                        <li><a href="practica.html">Practica</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="acerca-de.html">Acerca de</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📷</a>
+                        <a href="#">💼</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AR Bot. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/escanea-ar.js"></script>
+</body>
+</html>

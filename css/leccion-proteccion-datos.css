@@ -1,0 +1,847 @@
+/* leccion-proteccion-datos.css */
+/* ============================================
+   CSS ESPECÍFICO: Protección de Datos Personales
+   leccion-proteccion-datos.css
+   ============================================ */
+
+/* NIVEL INTERMEDIO - Badge color diferenciado */
+.level-intermedio {
+    color: #FF6600 !important;
+    font-weight: 600;
+}
+
+/* ============================================
+   PROTECTION SECTIONS
+   ============================================ */
+.protection-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #E5E7EB;
+}
+
+.protection-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 2rem;
+}
+
+.protection-section h2 {
+    color: #1F2937;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+/* ============================================
+   DATA CATEGORIES
+   ============================================ */
+.data-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.data-card {
+    background: linear-gradient(135deg, #F0F9FF, #F3F4F6);
+    border: 2px solid #0066CC;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.data-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.15);
+}
+
+.data-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.data-card h3 {
+    color: #1F2937;
+    margin: 0.5rem 0;
+    font-size: 1.05rem;
+}
+
+.data-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0 0;
+    text-align: left;
+}
+
+.data-card li {
+    color: #4B5563;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.data-card li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0066CC;
+    font-weight: bold;
+}
+
+.info-highlight {
+    background: linear-gradient(135deg, #F0F9FF, #E0F2FE);
+    border-left: 4px solid #0066CC;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+/* ============================================
+   RISKS GRID
+   ============================================ */
+.risks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.risk-box {
+    background: linear-gradient(135deg, #FFF0F0, #FFE5E5);
+    border: 2px solid #CC0000;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.risk-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(204, 0, 0, 0.15);
+}
+
+.risk-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.risk-box h3 {
+    color: #1F2937;
+    margin: 0.5rem 0;
+    font-size: 1.05rem;
+}
+
+.risk-box p {
+    color: #4B5563;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.stat-box {
+    background: linear-gradient(135deg, #FFF9F0, #FFFAF5);
+    border-left: 4px solid #FF6600;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+.stat-box p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* ============================================
+   RIGHTS CONTAINER
+   ============================================ */
+.rights-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.right-card {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.right-card:hover {
+    border-color: #10B981;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.12);
+}
+
+.right-number {
+    font-size: 2rem;
+    min-width: 60px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.right-content {
+    flex: 1;
+}
+
+.right-content h3 {
+    color: #1F2937;
+    margin: 0 0 0.75rem 0;
+    font-size: 1.2rem;
+}
+
+.right-content > p {
+    color: #4B5563;
+    line-height: 1.6;
+    margin: 0.75rem 0;
+}
+
+.right-example {
+    background: linear-gradient(135deg, #F0FDF4, #ECFDF5);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 4px solid #10B981;
+}
+
+.right-example p {
+    margin: 0.5rem 0;
+    color: #4B5563;
+    font-size: 0.95rem;
+}
+
+.right-tip {
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 4px solid #10B981;
+    padding: 0.75rem;
+    border-radius: 6px;
+    color: #4B5563;
+    font-size: 0.95rem;
+    margin: 1rem 0 0 0;
+}
+
+/* ============================================
+   HABEAS DATA
+   ============================================ */
+.habeas-box {
+    background: linear-gradient(135deg, #F0F9FF, #F0FDF4);
+    border: 2px solid #0066CC;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.habeas-box h3 {
+    color: #1F2937;
+    margin-top: 0;
+}
+
+.habeas-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.case {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #0066CC;
+    text-align: center;
+}
+
+.case-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.case h4 {
+    color: #1F2937;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.case p {
+    color: #4B5563;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.habeas-process {
+    background: linear-gradient(135deg, #F0FDF4, #ECFDF5);
+    border: 2px solid #10B981;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.habeas-process h3 {
+    color: #1F2937;
+    margin-top: 0;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.process-step {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #10B981;
+}
+
+.step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    background: #10B981;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.process-step p {
+    margin: 0;
+    color: #4B5563;
+    line-height: 1.5;
+}
+
+/* ============================================
+   SOURCES GRID
+   ============================================ */
+.sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.source-box {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.source-box:hover {
+    border-color: #FF6600;
+    box-shadow: 0 8px 20px rgba(255, 102, 0, 0.12);
+}
+
+.source-box h3 {
+    color: #1F2937;
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+}
+
+.source-box p {
+    color: #4B5563;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.source-box ul {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+}
+
+.source-box li {
+    color: #4B5563;
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.source-tip {
+    background: rgba(255, 102, 0, 0.1);
+    border-left: 4px solid #FF6600;
+    padding: 0.75rem;
+    border-radius: 6px;
+    color: #4B5563;
+    font-size: 0.9rem;
+    margin: 1rem 0 0 0 !important;
+}
+
+/* ============================================
+   PROTECTION ACTIONS
+   ============================================ */
+.protection-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.action-card {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.action-card:hover {
+    border-color: #10B981;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.12);
+}
+
+.action-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #0066CC, #00CC66);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.action-card h3 {
+    color: #1F2937;
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+}
+
+.action-card p {
+    color: #4B5563;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.action-card ul {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+}
+
+.action-card li {
+    color: #4B5563;
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.action-tip {
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 4px solid #10B981;
+    padding: 0.75rem;
+    border-radius: 6px;
+    color: #4B5563;
+    font-size: 0.9rem;
+    margin: 1rem 0 0 0 !important;
+}
+
+/* ============================================
+   SOCIAL NETWORKS
+   ============================================ */
+.social-networks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.network {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.network h3 {
+    color: #1F2937;
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+.network ol {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.network li {
+    color: #4B5563;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.social-warning {
+    background: linear-gradient(135deg, #FFF0F0, #FFE5E5);
+    border: 2px solid #CC0000;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+.social-warning p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ============================================
+   ALERT INDICATORS
+   ============================================ */
+.alert-indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.indicator {
+    background: linear-gradient(135deg, #FFF0F0, #FFE5E5);
+    border: 2px solid #CC0000;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.indicator-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.indicator h4 {
+    color: #1F2937;
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.indicator p {
+    color: #4B5563;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.action-text {
+    background: white;
+    border-left: 4px solid #CC0000;
+    padding: 0.75rem;
+    border-radius: 6px;
+    color: #1F2937;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.breach-check {
+    background: linear-gradient(135deg, #F0FDF4, #ECFDF5);
+    border: 2px solid #10B981;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.breach-check h3 {
+    color: #1F2937;
+    margin-top: 0;
+}
+
+.check-tool {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.check-tool p {
+    margin: 0.5rem 0;
+    color: #4B5563;
+}
+
+.check-tool a {
+    color: #0066CC;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.check-tool a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   REPORT CHANNELS
+   ============================================ */
+.report-channels {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.channel {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.channel:hover {
+    border-color: #0066CC;
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.12);
+}
+
+.channel h3 {
+    color: #1F2937;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.channel p {
+    color: #4B5563;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.channel ul {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+}
+
+.channel li {
+    color: #4B5563;
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.channel a {
+    color: #0066CC;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.channel a:hover {
+    text-decoration: underline;
+}
+
+.report-process {
+    background: linear-gradient(135deg, #F0F9FF, #F0FDF4);
+    border: 2px solid #0066CC;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.report-process h3 {
+    color: #1F2937;
+    margin-top: 0;
+}
+
+.process {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.proc-step {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #0066CC;
+}
+
+.proc-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    background: #0066CC;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.proc-step p {
+    margin: 0;
+    color: #4B5563;
+    line-height: 1.5;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.lesson-cta-section {
+    background: linear-gradient(135deg, #0066CC15, #00CC6615);
+    border: 2px solid #0066CC;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.lesson-cta-section h3 {
+    color: #1F2937;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.lesson-cta-section p {
+    color: #4B5563;
+    font-size: 1.05rem;
+    margin: 1rem 0;
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #FFCC00, #FFD93D);
+    color: #1F2937;
+    border: none;
+    font-weight: 700;
+}
+
+.btn-accent:hover {
+    background: linear-gradient(135deg, #FFD93D, #FFCC00);
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-large:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   NEXT LESSON CARD
+   ============================================ */
+.next-lesson-card {
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .next-lesson-card {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+}
+
+.next-lesson-card:hover {
+    border-color: #0066CC;
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.15);
+}
+
+.next-lesson-content {
+    flex: 1;
+}
+
+.next-lesson-label {
+    display: block;
+    color: #0066CC;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.next-lesson-content h3 {
+    margin: 0.5rem 0;
+    color: #1F2937;
+}
+
+.next-lesson-content p {
+    margin: 0;
+    color: #6B7280;
+}
+
+.btn-primary {
+    white-space: nowrap;
+    padding: 0.75rem 1.5rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .protection-section {
+        margin-top: 2rem;
+        padding-top: 1rem;
+    }
+
+    .data-categories,
+    .risks-grid,
+    .sources-grid,
+    .protection-actions,
+    .social-networks,
+    .alert-indicators {
+        grid-template-columns: 1fr;
+    }
+
+    .right-card {
+        flex-direction: column;
+    }
+
+    .lesson-cta-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .data-card,
+    .risk-box,
+    .source-box,
+    .action-card,
+    .network,
+    .indicator,
+    .channel {
+        padding: 1rem;
+    }
+
+    .right-card {
+        padding: 1rem;
+    }
+
+    .next-lesson-card {
+        padding: 1rem;
+    }
+
+    .habeas-box,
+    .habeas-process,
+    .report-process {
+        padding: 1rem;
+    }
+}

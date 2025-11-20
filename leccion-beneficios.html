@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende cuáles son los beneficios de la transformación digital en Colombia">
+    <title>Beneficios para Ciudadanos y Empresas - AR Bot</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- CSS Específico de esta lección -->
+    <link rel="stylesheet" href="css/leccion-beneficios.css">
+</head>
+<body>
+    
+    <!-- Barra de progreso de lectura -->
+    <div class="reading-progress-bar" id="readingProgress"></div>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <img src="images/Logo.png" alt="AR Bot Logo" class="logo-img">
+                    <span class="logo-text">AR BOT</span>
+                </a>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="aprende.html" class="active">Aprende</a></li>
+                <li><a href="practica.html">Practica</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="escanea-ar.html" class="btn-nav-ar">Escanear AR</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER DE LECCIÓN -->
+    <header class="lesson-header">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="aprende.html">Aprende</a>
+                <span class="breadcrumb-separator">›</span>
+                <span>Beneficios para Ciudadanos y Empresas</span>
+            </nav>
+            
+            <!-- Badge y Título -->
+            <span class="lesson-badge badge-3975">CONPES 3975</span>
+            <h1 class="lesson-main-title">💼 Beneficios para Ciudadanos y Empresas</h1>
+            
+            <!-- Metadata -->
+            <div class="lesson-metadata">
+                <span class="meta-item">⏱️ 7 min lectura</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item level-basico">Básico</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-item">📅 Actualizado: Feb 2025</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="lesson-layout">
+        <div class="container">
+            <div class="lesson-wrapper">
+                
+                <!-- SIDEBAR (Desktop) / Índice colapsable (Móvil) -->
+                <aside class="lesson-sidebar" id="lessonSidebar">
+                    <div class="sidebar-sticky">
+                        <button class="sidebar-toggle" id="sidebarToggle">
+                            📑 Índice de contenido
+                        </button>
+                        
+                        <div class="sidebar-content" id="sidebarContent">
+                            <h3 class="sidebar-title">En esta lección</h3>
+                            <nav class="table-of-contents" id="tableOfContents">
+                                <a href="#introduccion" class="toc-link active">Introducción</a>
+                                <a href="#ciudadanos" class="toc-link">Para Ciudadanos</a>
+                                <a href="#empresas" class="toc-link">Para Empresas</a>
+                                <a href="#estado" class="toc-link">Para el Estado</a>
+                                <a href="#economia" class="toc-link">Impacto Económico</a>
+                                <a href="#sociedad" class="toc-link">Impacto Social</a>
+                                <a href="#ejemplos" class="toc-link">Ejemplos Reales</a>
+                                <a href="#siguiente" class="toc-link">Siguiente Paso</a>
+                            </nav>
+                            
+                            <div class="sidebar-related">
+                                <h4>Lecciones relacionadas</h4>
+                                <a href="leccion-transformacion-digital.html" class="related-link">
+                                    📱 ¿Qué es la Transformación Digital?
+                                </a>
+                                <a href="leccion-4-pilares-ia.html" class="related-link">
+                                    🤖 Los 4 Pilares de la IA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- CONTENIDO DEL ARTÍCULO -->
+                <article class="lesson-content" id="lessonContent">
+                    
+                    <!-- Introducción -->
+                    <section id="introduccion">
+                        <div class="lesson-video">
+                            <video controls preload="metadata" id="videoLeccion">
+                                <source src="videos/Microleccion3.mp4" type="video/mp4">
+                                Tu navegador no soporta la reproducción de videos. 
+                                <a href="videos/Microleccion3.mp4">Descarga el video aquí</a>.
+                            </video>
+                            <p class="video-caption">
+                                🎥 Beneficios de la Transformación Digital en Colombia
+                                <br>
+                                <small style="opacity: 0.8;">🔊 Asegúrate de que el volumen esté activado</small>
+                            </p>
+                        </div>
+
+                        <div class="ar-option-container">
+                            <div class="ar-option-box">
+                                <a href="https://mywebar.com/p/Project_0_beneficios" target="_blank" rel="noopener noreferrer" class="qr-link">
+                                    <img src="images/BeneficiosAR.png" alt="Código QR para experiencia AR" class="qr-image">
+                                </a>
+                                <div class="ar-text-content">
+                                    <h4>¿Prefieres Realidad Aumentada?</h4>
+                                    <p>
+                                        Escanea el código QR con tu celular o 
+                                        <a href="https://mywebar.com/p/Project_0_beneficios" target="_blank" rel="noopener noreferrer">
+                                            haz clic aquí
+                                        </a> 
+                                        para una experiencia interactiva.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="lead-paragraph">
+                            La transformación digital no es solo una moda tecnológica. Es una oportunidad real que trae beneficios concretos y medibles para todos: ciudadanos, empresas y el gobierno. En esta lección exploraremos cómo la tecnología puede mejorar tu vida diaria y la economía de Colombia.
+                        </p>
+                        
+                        <p>
+                            Desde hacer trámites más rápido hasta crear nuevos empleos, la transformación digital está cambiando Colombia de formas positivas y tangibles.
+                        </p>
+                    </section>
+
+                    <!-- Para Ciudadanos -->
+                    <section id="ciudadanos">
+                        <h2>Beneficios para Ti como Ciudadano</h2>
+
+                        <div class="intro-box">
+                            <p>
+                                La transformación digital te ofrece beneficios directos en tu vida diaria. Veamos los más importantes:
+                            </p>
+                        </div>
+
+                        <div class="benefits-cards">
+                            <div class="benefit-card">
+                                <div class="benefit-icon">⏱️</div>
+                                <h3>Ahorro de Tiempo</h3>
+                                <p>
+                                    Las tareas ahora son más rápidas. En lugar de pasar horas en una fila del banco, transfiere dinero desde tu celular en segundos. Los trámites que demoraban días ahora se hacen en minutos.
+                                </p>
+                                <div class="benefit-example">
+                                    <strong>Ejemplo:</strong> Renovar tu licencia de conducción
+                                    <ul>
+                                        <li>❌ Antes: 4 horas de fila</li>
+                                        <li>✅ Ahora: Cita online + 20 minutos</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="benefit-card">
+                                <div class="benefit-icon">💰</div>
+                                <h3>Ahorro de Dinero</h3>
+                                <p>
+                                    Menos gastos de transporte, servicios más baratos en línea, y acceso a mejores precios. Puedes comparar precios desde casa sin gastar en gasolina.
+                                </p>
+                                <div class="benefit-example">
+                                    <strong>Ejemplo:</strong> Compra de pasajes aéreos
+                                    <ul>
+                                        <li>❌ Antes: Viaje a agencia + comisiones</li>
+                                        <li>✅ Ahora: Directo, sin intermediarios, más barato</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="benefit-card">
+                                <div class="benefit-icon">🌍</div>
+                                <h3>Más Oportunidades</h3>
+                                <p>
+                                    Trabajo remoto desde cualquier parte, cursos online de universidades del mundo, negocios sin límite geográfico. La tecnología rompe fronteras.
+                                </p>
+                                <div class="benefit-example">
+                                    <strong>Ejemplo:</strong> Trabajar como freelancer
+                                    <ul>
+                                        <li>❌ Antes: Solo empleos locales</li>
+                                        <li>✅ Ahora: Clientes de todo el mundo</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="benefit-card">
+                                <div class="benefit-icon">🏥</div>
+                                <h3>Mejor Calidad de Vida</h3>
+                                <p>
+                                    Telemedicina sin salir de casa, educación flexible, servicios 24/7, información en tus manos. Todo diseñado para tu comodidad.
+                                </p>
+                                <div class="benefit-example">
+                                    <strong>Ejemplo:</strong> Consulta médica
+                                    <ul>
+                                        <li>❌ Antes: Espera 2 horas en consultorio</li>
+                                        <li>✅ Ahora: Video consulta a la hora que quieras</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="benefit-card">
+                                <div class="benefit-icon">♿</div>
+                                <h3>Inclusión Digital</h3>
+                                <p>
+                                    Las personas con discapacidad tienen mayor acceso. Personas mayores pueden aprender nuevas habilidades. Zonas rurales pueden acceder a servicios que antes eran solo en ciudades.
+                                </p>
+                                <div class="benefit-example">
+                                    <strong>Ejemplo:</strong> Persona en zona rural
+                                    <ul>
+                                        <li>❌ Antes: 3 horas de viaje a ciudad</li>
+                                        <li>✅ Ahora: Trámites desde su pueblo</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="benefit-card">
+                                <div class="benefit-icon">📚</div>
+                                <h3>Educación Accesible</h3>
+                                <p>
+                                    Aprende cualquier cosa desde tu celular. Cursos gratuitos de universidades top mundiales, en tu idioma, a tu ritmo. La educación de calidad ya no es un lujo.
+                                </p>
+                                <div class="benefit-example">
+                                    <strong>Ejemplo:</strong> Aprender programación
+                                    <ul>
+                                        <li>❌ Antes: $3.000.000 en instituto privado</li>
+                                        <li>✅ Ahora: Gratis en Coursera, Platzi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-box info-success">
+                            <div class="info-icon">✅</div>
+                            <div class="info-content">
+                                <strong>Conclusión para Ciudadanos:</strong> La transformación digital te ahorra tiempo y dinero, y te abre un mundo de oportunidades que antes eran imposibles para la mayoría.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Para Empresas -->
+                    <section id="empresas">
+                        <h2>Beneficios para Empresas</h2>
+
+                        <div class="intro-box">
+                            <p>
+                                Las empresas que se transforman digitalmente crecen más rápido y generan más empleos. Estos son los beneficios principales:
+                            </p>
+                        </div>
+
+                        <div class="business-benefits">
+                            <div class="business-item">
+                                <div class="item-number">1</div>
+                                <h3>Más Productividad</h3>
+                                <p>
+                                    Automatizar tareas repetitivas significa menos tiempo en cosas aburridas y más tiempo en tareas creativas. Una persona que antes pasaba 2 horas en reportes manuales ahora dedica ese tiempo a estrategia.
+                                </p>
+                                <div class="metric">
+                                    <strong>Impacto:</strong> +30-50% productividad
+                                </div>
+                            </div>
+
+                            <div class="business-item">
+                                <div class="item-number">2</div>
+                                <h3>Reducción de Costos</h3>
+                                <p>
+                                    Menos papel, menos desplazamientos, menos desperdicios. Los procesos manuales son caros; los digitales son eficientes. Una pequeña empresa puede ahorrar millones al año.
+                                </p>
+                                <div class="metric">
+                                    <strong>Impacto:</strong> -20-40% costos operativos
+                                </div>
+                            </div>
+
+                            <div class="business-item">
+                                <div class="item-number">3</div>
+                                <h3>Más Clientes</h3>
+                                <p>
+                                    Una tienda física solo llega a quien pasa por ahí. Una tienda online llega a todo el mundo. Puedes vender a otros países sin tener sucursales físicas.
+                                </p>
+                                <div class="metric">
+                                    <strong>Impacto:</strong> +5-10x nuevo mercado
+                                </div>
+                            </div>
+
+                            <div class="business-item">
+                                <div class="item-number">4</div>
+                                <h3>Mejor Servicio</h3>
+                                <p>
+                                    Chatbots disponibles 24/7, respuestas instantáneas, soporte multicanal. Tus clientes se sienten cuidados. La satisfacción aumenta, las reseñas mejoran, la reputación crece.
+                                </p>
+                                <div class="metric">
+                                    <strong>Impacto:</strong> +60% satisfacción cliente
+                                </div>
+                            </div>
+
+                            <div class="business-item">
+                                <div class="item-number">5</div>
+                                <h3>Decisiones Basadas en Datos</h3>
+                                <p>
+                                    Ya no adivinas. Con datos reales sabes exactamente qué funciona, qué no, y dónde invertir. Los datos son el oro del siglo XXI, y la transformación digital te da acceso a ese oro.
+                                </p>
+                                <div class="metric">
+                                    <strong>Impacto:</strong> +3x ROI en decisiones
+                                </div>
+                            </div>
+
+                            <div class="business-item">
+                                <div class="item-number">6</div>
+                                <h3>Competitividad Global</h3>
+                                <p>
+                                    Tus competidores están digitalizándose. Si no lo haces, desapareces. Las empresas digitales crecen 3x más rápido que las tradicionales.
+                                </p>
+                                <div class="metric">
+                                    <strong>Impacto:</strong> +300% crecimiento vs tradicional
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Casos de Éxito en Colombia</h3>
+
+                        <div class="success-stories">
+                            <div class="story">
+                                <div class="story-header">
+                                    <strong>Rappi</strong>
+                                    <span class="badge">Startup Digital Colombiana</span>
+                                </div>
+                                <p>
+                                    Comenzó como una idea de entregar comida rápido. Hoy es la empresa de delivery más grande de Latinoamérica, presente en 5 países, valuada en miles de millones.
+                                </p>
+                                <p><strong>Lección:</strong> La tecnología permite escalar de forma exponencial</p>
+                            </div>
+
+                            <div class="story">
+                                <div class="story-header">
+                                    <strong>Platzi</strong>
+                                    <span class="badge">EdTech Colombiana</span>
+                                </div>
+                                <p>
+                                    Una plataforma educativa colombiana que enseña a millones de estudiantes en Latinoamérica. Formó talentos que ahora trabajan en FAANG.
+                                </p>
+                                <p><strong>Lección:</strong> La educación digital es el futuro</p>
+                            </div>
+
+                            <div class="story">
+                                <div class="story-header">
+                                    <strong>Mercado Libre Colombia</strong>
+                                    <span class="badge">E-commerce</span>
+                                </div>
+                                <p>
+                                    Permitió que pequeños vendedores vendieran en línea. Hoy generan más ingresos en línea que vendiendo presencialmente.
+                                </p>
+                                <p><strong>Lección:</strong> La tecnología democratiza oportunidades</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box info-success">
+                            <div class="info-icon">✅</div>
+                            <div class="info-content">
+                                <strong>Conclusión para Empresas:</strong> La transformación digital no es un gasto, es una inversión que se recupera rápidamente en productividad, clientes y ganancias.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Para el Estado -->
+                    <section id="estado">
+                        <h2>Beneficios para el Estado y la Sociedad</h2>
+
+                        <div class="state-benefits">
+                            <div class="state-card">
+                                <div class="state-icon">🏛️</div>
+                                <h3>Gobierno Más Eficiente</h3>
+                                <p>
+                                    Trámites digitales reducen filas y corrupción. Los funcionarios pueden atender a más personas. El gobierno ahorra dinero en infraestructura y papelería.
+                                </p>
+                                <p><strong>Ahorro estimado:</strong> Billones de pesos al año</p>
+                            </div>
+
+                            <div class="state-card">
+                                <div class="state-icon">🌱</div>
+                                <h3>Impacto Ambiental Positivo</h3>
+                                <p>
+                                    Menos papel, menos transporte físico, menos contaminación. Un trámite digital emite 100x menos CO2 que uno presencial con desplazamientos.
+                                </p>
+                                <p><strong>Beneficio:</strong> Sostenibilidad ambiental</p>
+                            </div>
+
+                            <div class="state-card">
+                                <div class="state-icon">💼</div>
+                                <h3>Generación de Empleos</h3>
+                                <p>
+                                    Se crean miles de nuevos empleos en tecnología. Programadores, data scientists, especialistas en ciberseguridad, diseñadores. Empleos con salarios altos.
+                                </p>
+                                <p><strong>Meta CONPES:</strong> 50.000 profesionales en IA para 2030</p>
+                            </div>
+
+                            <div class="state-card">
+                                <div class="state-icon">📊</div>
+                                <h3>Mejor Información para Decisiones</h3>
+                                <p>
+                                    Los datos permiten al gobierno tomar mejores decisiones basadas en evidencia real, no en intuición. Políticas públicas más efectivas.
+                                </p>
+                                <p><strong>Beneficio:</strong> Mayor gobernanza</p>
+                            </div>
+
+                            <div class="state-card">
+                                <div class="state-icon">🔐</div>
+                                <h3>Transparencia y Confianza</h3>
+                                <p>
+                                    Procesos digitales son más fáciles de auditar y fiscalizar. Menos corrupción. La sociedad confía más en instituciones transparentes.
+                                </p>
+                                <p><strong>Beneficio:</strong> Democracia más fuerte</p>
+                            </div>
+
+                            <div class="state-card">
+                                <div class="state-icon">🌐</div>
+                                <h3>Competitividad Internacional</h3>
+                                <p>
+                                    Países digitalizados atraen más inversión extranjera. Empresas globales eligen ciudades con servicios digitales maduros.
+                                </p>
+                                <p><strong>Objetivo:</strong> Colombia como hub tech regional</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box info-success">
+                            <div class="info-icon">✅</div>
+                            <div class="info-content">
+                                <strong>Conclusión para el Estado:</strong> La transformación digital es fundamental para que Colombia compita globalmente y brinde mejor servicios a sus ciudadanos.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Impacto Económico -->
+                    <section id="economia">
+                        <h2>Impacto Económico: Los Números</h2>
+
+                        <p>
+                            No es solo teoría. Los números demuestran que la transformación digital tiene impacto económico real:
+                        </p>
+
+                        <div class="economic-metrics">
+                            <div class="metric-card">
+                                <div class="metric-number">$15.7B</div>
+                                <p>Potencial de valor que podría agregar la IA a la economía global para 2030</p>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-number">+3x</div>
+                                <p>Crecimiento más rápido de empresas digitales vs tradicionales</p>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-number">-40%</div>
+                                <p>Reducción de costos operativos con digitalización</p>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-number">+5-10x</div>
+                                <p>Expansión de mercado potencial con e-commerce</p>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-number">$479.273M</div>
+                                <p>Inversión CONPES en IA para Colombia (2025-2030)</p>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-number">50.000</div>
+                                <p>Empleos en IA que se crearán en Colombia</p>
+                            </div>
+                        </div>
+
+                        <h3>Retorno de Inversión (ROI)</h3>
+
+                        <div class="roi-box">
+                            <p>
+                                Una pequeña empresa que invierte $10 millones en transformación digital recupera esa inversión en <strong>9-12 meses</strong>, y luego gana 10x ese valor en los años siguientes.
+                            </p>
+                            <p>
+                                El CONPES proyecta que invertir $479.273 millones en IA para 2030 generará retornos de <strong>más de $2 billones</strong> en valor agregado.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Impacto Social -->
+                    <section id="sociedad">
+                        <h2>Impacto Social: Vida Mejor</h2>
+
+                        <div class="social-impact-grid">
+                            <div class="impact-item">
+                                <div class="impact-icon">🎓</div>
+                                <h3>Educación</h3>
+                                <p>
+                                    Un campesino en La Guajira puede estudiar en MIT. Una madre soltera puede aprender programación de noche. La educación ya no es privilegio de ricos.
+                                </p>
+                            </div>
+
+                            <div class="impact-item">
+                                <div class="impact-icon">🏥</div>
+                                <h3>Salud</h3>
+                                <p>
+                                    Telemedicina lleva especialistas a zonas rurales. IA diagnostica cáncer mejor que doctores. La salud de calidad es accesible para más personas.
+                                </p>
+                            </div>
+
+                            <div class="impact-item">
+                                <div class="impact-icon">💼</div>
+                                <h3>Empleo</h3>
+                                <p>
+                                    Más oportunidades de trabajo, trabajo remoto que permite cuidar familia, emprendimiento digital con bajo costo. Menos desempleo.
+                                </p>
+                            </div>
+
+                            <div class="impact-item">
+                                <div class="impact-icon">👨‍👩‍👧‍👦</div>
+                                <h3>Familia</h3>
+                                <p>
+                                    Videollamadas gratuitas con familia lejos. Educación para hijos desde casa. Flexibilidad para pasar más tiempo en familia.
+                                </p>
+                            </div>
+
+                            <div class="impact-item">
+                                <div class="impact-icon">🤝</div>
+                                <h3>Comunidad</h3>
+                                <p>
+                                    Plataformas digitales conectan a personas. Movimientos sociales se organizan. Voz ciudadana es más fuerte.
+                                </p>
+                            </div>
+
+                            <div class="impact-item">
+                                <div class="impact-icon">🌍</div>
+                                <h3>Igualdad</h3>
+                                <p>
+                                    Reduce brechas entre ricos y pobres. Una persona sin recursos tiene acceso a las mismas herramientas que millonarios.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Ejemplos Reales -->
+                    <section id="ejemplos">
+                        <h2>Ejemplos Reales: Historias de Impacto</h2>
+
+                        <div class="stories-grid">
+                            <div class="story-card">
+                                <div class="story-emoji">👩‍💻</div>
+                                <h3>María, Programadora</h3>
+                                <p>
+                                    Maria vive en un pueblo rural de Nariño. No tenía oportunidades de empleo. Aprendió programación en línea de forma gratuita. Ahora gana $8 millones al mes trabajando remoto para una empresa en Nueva York.
+                                </p>
+                                <p><strong>Beneficio:</strong> Oportunidad económica, calidad de vida, desarrollo regional</p>
+                            </div>
+
+                            <div class="story-card">
+                                <div class="story-emoji">🏪</div>
+                                <h3>Doña Rosa, Comerciante</h3>
+                                <p>
+                                    Rosa vendía ropa en una tienda física con pocos clientes. Abrió una tienda en Mercado Libre. En 6 meses sus ventas crecieron 10x. Ahora tiene 3 empleados.
+                                </p>
+                                <p><strong>Beneficio:</strong> Crecimiento empresarial, empleos, estabilidad económica</p>
+                            </div>
+
+                            <div class="story-card">
+                                <div class="story-emoji">🧑‍⚕️</div>
+                                <h3>Dr. Juan, Médico Rural</h3>
+                                <p>
+                                    Juan trabaja en una clínica rural sin especialistas. Ahora usa telemedicina para consultar con cardiólogos en Bogotá. Salva vidas de pacientes que antes viajaban horas.
+                                </p>
+                                <p><strong>Beneficio:</strong> Salud mejor, vidas salvadas, menos desigualdad</p>
+                            </div>
+
+                            <div class="story-card">
+                                <div class="story-emoji">👦</div>
+                                <h3>Carlitos, Estudiante</h3>
+                                <p>
+                                    Carlitos vive en un barrio pobre donde no hay buenas escuelas. Toma cursos online gratis de Coursera. Ganó una beca para universidad. Será el primer profesional de su familia.
+                                </p>
+                                <p><strong>Beneficio:</strong> Movilidad social, familia prospera, nación más educada</p>
+                            </div>
+
+                            <div class="story-card">
+                                <div class="story-emoji">🏢</div>
+                                <h3>Empresa Floricultura</h3>
+                                <p>
+                                    Una floristería con 50 años de historia casi quiebra. Se digitalizó: tienda online, automatización de procesos, datos de clientes. Ahora es la cadena de floristerías más grande online en Colombia.
+                                </p>
+                                <p><strong>Beneficio:</strong> Salvó empleos, creció exponencialmente, impacto regional</p>
+                            </div>
+
+                            <div class="story-card">
+                                <div class="story-emoji">🌾</div>
+                                <h3>Agricultor Tech</h3>
+                                <p>
+                                    Un campesino cafetalero usa IoT y IA para monitorear sus cultivos desde celular. Detecta plagas a tiempo, usa agua eficientemente, aumenta producción en 40%.
+                                </p>
+                                <p><strong>Beneficio:</strong> Mayor productividad, sostenibilidad, mejor renta</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CTA QUIZ -->
+                    <section class="lesson-cta-section">
+                        <h3>¿Listo para poner a prueba tu conocimiento?</h3>
+                        <p>Ahora que conoces los beneficios, verifica lo que aprendiste con un quiz interactivo.</p>
+                        <a href="practica.html" class="btn btn-accent btn-large">Hacer el Quiz →</a>
+                    </section>
+
+                    <!-- Siguiente Paso -->
+                    <section id="siguiente">
+                        <h2>Siguiente Paso</h2>
+                        <p>
+                            Ahora que entiendes los beneficios de la transformación digital, es tiempo de aprender cómo participar y aprovechar estas oportunidades.
+                        </p>
+                        
+                        <div class="next-lesson-card">
+                            <div class="next-lesson-content">
+                                <span class="next-lesson-label">Siguiente lección</span>
+                                <h3>🛡️ Casos de Uso en Colombia</h3>
+                                <p>Aprende de los diferentes caosos de uso.</p>
+                            </div>
+                            <a href="leccion-casos-uso.html" class="btn btn-primary">Continuar →</a>
+                        </div>
+                    </section>
+
+                </article>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER DE LECCIÓN -->
+    <footer class="lesson-footer">
+        <div class="container">
+            
+            <!-- Navegación entre lecciones -->
+            <div class="lesson-navigation">
+                <a href="aprende.html" class="nav-lesson-btn nav-prev">
+                    ← Volver a Aprende
+                </a>
+                <a href="leccion-casos-uso.html" class="nav-lesson-btn nav-next">
+                    Siguiente lección →
+                </a>
+            </div>
+
+            <!-- Compartir en redes -->
+            <div class="lesson-share">
+                <span class="share-label">Compartir esta lección:</span>
+                <div class="share-buttons">
+                    <button class="share-btn share-twitter" onclick="shareOnTwitter()">
+                        🐦 Twitter
+                    </button>
+                    <button class="share-btn share-facebook" onclick="shareOnFacebook()">
+                        📘 Facebook
+                    </button>
+                    <button class="share-btn share-whatsapp" onclick="shareOnWhatsApp()">
+                        💬 WhatsApp
+                    </button>
+                    <button class="share-btn share-copy" onclick="copyLink()">
+                        🔗 Copiar link
+                    </button>
+                </div>
+            </div>
+
+            <!-- Recursos adicionales -->
+            <div class="lesson-resources">
+                <h4>📚 Recursos Adicionales</h4>
+                <ul>
+                    <li><a href="recursos.html" target="_blank">📄 Leer CONPES 3975 completo (PDF)</a></li>
+                    <li><a href="recursos.html" target="_blank">📄 Leer CONPES 4144 completo (PDF)</a></li>
+                    <li><a href="https://www.mintic.gov.co" target="_blank">🌐 Sitio oficial MinTIC</a></li>
+                    <li><a href="https://www.dnp.gov.co" target="_blank">🏛️ Departamento Nacional de Planeación</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- FOOTER GENERAL -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="aprende.html">Aprende</a></li>
+                        <li><a href="practica.html">Practica</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="acerca-de.html">Acerca de</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="https://www.umng.edu.co" target="_blank">Universidad Militar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 AR Bot | CONPES 3975 y 3995</p>
+                <p>Hecho con ❤️ por Brian, Santiago, Juan y David</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/leccion.js"></script>
+</body>
+</html>

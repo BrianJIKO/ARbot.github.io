@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | AR Bot</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <img src="images/Logo.png" alt="AR Bot Logo" class="logo-img">
+                    <span class="logo-text">AR BOT</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="aprende.html" class="nav-link">Aprende</a></li>
+                <li><a href="practica.html" class="nav-link">Practica</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-contacto">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-icon">📬</div>
+                <h1 class="hero-title">Contáctanos</h1>
+                <p class="hero-description">
+                    ¿Tienes preguntas, sugerencias o necesitas ayuda? Estamos aquí para ti
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="contacto-page">
+        <div class="container">
+            
+            <div class="contacto-layout">
+                
+                <!-- FORMULARIO DE CONTACTO -->
+                <section class="contacto-form-section">
+                    <div class="form-header">
+                        <h2 class="section-title">
+                            <span class="title-icon">✉️</span>
+                            Envíanos un Mensaje
+                        </h2>
+                        <p class="section-description">
+                            Completa el formulario y te responderemos lo antes posible
+                        </p>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre" class="form-label">
+                                    Nombre Completo <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="nombre" 
+                                    name="nombre" 
+                                    class="form-input" 
+                                    placeholder="Tu nombre"
+                                    required
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    Correo Electrónico <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    placeholder="tu@ejemplo.com"
+                                    required
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefono" class="form-label">
+                                    Teléfono (Opcional)
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    id="telefono" 
+                                    name="telefono" 
+                                    class="form-input" 
+                                    placeholder="+57 300 123 4567"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="asunto" class="form-label">
+                                    Asunto <span class="required">*</span>
+                                </label>
+                                <select id="asunto" name="asunto" class="form-select" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="pregunta">Pregunta General</option>
+                                    <option value="soporte">Soporte Técnico</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="colaboracion">Colaboración</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje" class="form-label">
+                                Mensaje <span class="required">*</span>
+                            </label>
+                            <textarea 
+                                id="mensaje" 
+                                name="mensaje" 
+                                class="form-textarea" 
+                                rows="6" 
+                                placeholder="Escribe tu mensaje aquí..."
+                                required
+                            ></textarea>
+                            <span class="char-count">0 / 500 caracteres</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="acepto" name="acepto" required>
+                                <span>
+                                    Acepto la <a href="privacidad.html" target="_blank">Política de Privacidad</a> 
+                                    y los <a href="terminos.html" target="_blank">Términos y Condiciones</a>
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large btn-submit">
+                            <span class="btn-icon">📤</span>
+                            Enviar Mensaje
+                        </button>
+                        
+                        <div id="formMessage" class="form-message"></div>
+                        
+                    </form>
+                </section>
+                
+                <!-- INFO SIDEBAR -->
+                <aside class="contacto-sidebar">
+                    
+                    <!-- Información de Contacto -->
+                    <div class="info-card">
+                        <h3 class="info-title">
+                            <span class="info-icon">📞</span>
+                            Información de Contacto
+                        </h3>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="item-icon">✉️</div>
+                                <div class="item-content">
+                                    <p class="item-label">Email</p>
+                                    <a href="mailto:contacto@arbot.edu.co" class="item-value">
+                                        contacto@arbot.edu.co
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="item-icon">🏫</div>
+                                <div class="item-content">
+                                    <p class="item-label">Universidad</p>
+                                    <p class="item-value">Universidad Militar Nueva Granada</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="item-icon">📍</div>
+                                <div class="item-content">
+                                    <p class="item-label">Ubicación</p>
+                                    <p class="item-value">Bogotá D.C., Colombia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="item-icon">⏰</div>
+                                <div class="item-content">
+                                    <p class="item-label">Horario de Respuesta</p>
+                                    <p class="item-value">24-48 horas hábiles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Redes Sociales -->
+                    <div class="info-card">
+                        <h3 class="info-title">
+                            <span class="info-icon">🌐</span>
+                            Síguenos en Redes
+                        </h3>
+                        
+                        <div class="social-grid">
+                            <a href="#" class="social-card facebook" target="_blank">
+                                <span class="social-icon">📘</span>
+                                <span class="social-name">Facebook</span>
+                            </a>
+                            
+                            <a href="#" class="social-card twitter" target="_blank">
+                                <span class="social-icon">🐦</span>
+                                <span class="social-name">Twitter</span>
+                            </a>
+                            
+                            <a href="#" class="social-card instagram" target="_blank">
+                                <span class="social-icon">📷</span>
+                                <span class="social-name">Instagram</span>
+                            </a>
+                            
+                            <a href="#" class="social-card linkedin" target="_blank">
+                                <span class="social-icon">💼</span>
+                                <span class="social-name">LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Rápido -->
+                    <div class="info-card">
+                        <h3 class="info-title">
+                            <span class="info-icon">❓</span>
+                            Preguntas Frecuentes
+                        </h3>
+                        
+                        <p class="info-description">
+                            Antes de contactarnos, revisa nuestras preguntas frecuentes. 
+                            Quizás encuentres tu respuesta allí.
+                        </p>
+                        
+                        <a href="faq.html" class="btn btn-secondary btn-full">
+                            <span class="btn-icon">📚</span>
+                            Ver FAQ
+                        </a>
+                    </div>
+                    
+                </aside>
+                
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/Logo.png" alt="AR Bot" class="footer-logo-img">
+                        <span class="footer-logo-text">AR BOT</span>
+                    </div>
+                    <p class="footer-description">
+                        Tu asistente educativo sobre Transformación y Seguridad Digital
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Navegar</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="aprende.html">Aprende</a></li>
+                        <li><a href="practica.html">Practica</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="acerca-de.html">Acerca de</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📷</a>
+                        <a href="#">💼</a>
+                    </div>
+                </div>
+                <!-- Columna 4: Mi Cuenta -->
+                <div class="footer-column">
+                    <h4>Mi Cuenta</h4>
+                    <ul>
+                        <li><a href="login.html">Iniciar Sesión</a></li>
+                        <li><a href="registro.html">Crear Cuenta</a></li>
+                        <li><a href="recuperar-password.html">Recuperar Contraseña</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AR Bot | CONPES 3975 y 3995</p>
+                <p>Hecho con ❤️ por Brian, Santiago, Juan y David</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/contacto.js"></script>
+    <!-- AR Bot Chatbot --> 
+    <script src="js/ar-bot-chatbot.js"></script>
+</body>
+</html>

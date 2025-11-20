@@ -1,0 +1,444 @@
+/* ============================================
+   CSS ESPECÍFICO: ¿Cómo Participar?
+   leccion-como-participar.css
+   ============================================ */
+
+/* NIVEL INTERMEDIO - Badge color diferenciado */
+.level-intermedio {
+    color: #FF6600 !important;
+    font-weight: 600;
+}
+
+/* ============================================
+   INTRO HIGHLIGHT
+   ============================================ */
+.intro-highlight {
+    margin: 2rem 0;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #0066CC15, #00CC6615);
+    border-left: 4px solid #0066CC;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.highlight-text {
+    color: #4B5563;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.highlight-text strong {
+    color: #1F2937;
+}
+
+/* ============================================
+   ROLE SECTIONS
+   ============================================ */
+.role-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #E5E7EB;
+}
+
+.role-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 2rem;
+}
+
+.role-section h2 {
+    color: #1F2937;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.role-intro {
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border-left: 4px solid #FF6600;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #4B5563;
+}
+
+/* ============================================
+   ACTION CARDS
+   ============================================ */
+.action-card {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.action-card:hover {
+    border-color: #0066CC;
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.12);
+    transform: translateY(-3px);
+}
+
+.action-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+@media (max-width: 768px) {
+    .action-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.action-header h3 {
+    margin: 0;
+    color: #1F2937;
+    font-size: 1.2rem;
+    flex: 1;
+}
+
+.difficulty-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF6600, #FF8533);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.action-description {
+    color: #4B5563;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+/* ============================================
+   ACTION STEPS
+   ============================================ */
+.action-steps {
+    background: linear-gradient(135deg, #F0F9FF, #F0FDF4);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.action-steps h4 {
+    color: #1F2937;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.action-steps ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.action-steps li {
+    color: #4B5563;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.action-steps strong {
+    color: #1F2937;
+    font-weight: 600;
+}
+
+.action-steps ul ul {
+    margin: 0.5rem 0 0 1rem;
+    font-size: 0.95rem;
+}
+
+.action-steps ul ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   ACTION RESULT
+   ============================================ */
+.action-result {
+    background: linear-gradient(135deg, #10B98115, #0066CC15);
+    border-left: 4px solid #10B981;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    color: #4B5563;
+    font-size: 0.95rem;
+}
+
+.action-result strong {
+    color: #1F2937;
+}
+
+/* ============================================
+   RESOURCES GRID
+   ============================================ */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.resource-box {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.resource-box:hover {
+    border-color: #0066CC;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+}
+
+.resource-box h3 {
+    color: #1F2937;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.resource-box ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.resource-box li {
+    color: #4B5563;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.resource-box li:before {
+    content: "✓ ";
+    color: #10B981;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.resource-box a {
+    color: #0066CC;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resource-box a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   ACTION COMMITMENT
+   ============================================ */
+.action-commitment {
+    background: linear-gradient(135deg, #FFCC0015, #FF660015);
+    border: 2px solid #FFCC00;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.action-commitment h3 {
+    color: #1F2937;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.action-commitment p {
+    color: #4B5563;
+    margin: 0.5rem 0;
+}
+
+.commitment-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.commitment-list li {
+    color: #4B5563;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.commitment-list li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.lesson-cta-section {
+    background: linear-gradient(135deg, #0066CC15, #00CC6615);
+    border: 2px solid #0066CC;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.lesson-cta-section h3 {
+    color: #1F2937;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.lesson-cta-section p {
+    color: #4B5563;
+    font-size: 1.05rem;
+    margin: 1rem 0;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-large:hover {
+    transform: scale(1.05);
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #FFCC00, #FFD93D);
+    color: #1F2937;
+    border: none;
+    font-weight: 700;
+}
+
+.btn-accent:hover {
+    background: linear-gradient(135deg, #FFD93D, #FFCC00);
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* ============================================
+   NEXT LESSON CARD
+   ============================================ */
+.next-lesson-card {
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .next-lesson-card {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+}
+
+.next-lesson-card:hover {
+    border-color: #0066CC;
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.15);
+}
+
+.next-lesson-content {
+    flex: 1;
+}
+
+.next-lesson-label {
+    display: block;
+    color: #0066CC;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.next-lesson-content h3 {
+    margin: 0.5rem 0;
+    color: #1F2937;
+}
+
+.next-lesson-content p {
+    margin: 0;
+    color: #6B7280;
+}
+
+.btn-primary {
+    white-space: nowrap;
+    padding: 0.75rem 1.5rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .role-section {
+        margin-top: 2rem;
+        padding-top: 1rem;
+    }
+
+    .action-steps {
+        padding: 1rem;
+    }
+
+    .action-commitment {
+        padding: 1.5rem;
+    }
+
+    .lesson-cta-section {
+        padding: 1.5rem;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .action-card {
+        padding: 1rem;
+    }
+
+    .action-header h3 {
+        font-size: 1rem;
+    }
+
+    .action-steps ul {
+        padding-left: 1rem;
+    }
+
+    .action-commitment {
+        padding: 1rem;
+    }
+
+    .next-lesson-card {
+        padding: 1rem;
+    }
+}

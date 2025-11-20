@@ -1,0 +1,591 @@
+/* ============================================
+   CSS ESPECÍFICO: Beneficios para Ciudadanos y Empresas
+   leccion-beneficios.css
+   ============================================ */
+
+/* NIVEL BÁSICO - Badge color diferenciado */
+.level-basico {
+    color: #10B981 !important;
+    font-weight: 600;
+}
+
+/* ============================================
+   CAJA DE INTRODUCCIÓN
+   ============================================ */
+.intro-box {
+    background: linear-gradient(135deg, #0066CC15, #10B98115);
+    border-left: 4px solid #0066CC;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #4B5563;
+}
+
+/* ============================================
+   TARJETAS DE BENEFICIOS PARA CIUDADANOS
+   ============================================ */
+.benefits-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.benefit-card {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    border-color: #10B981;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    margin-top: 0;
+    color: #1F2937;
+    font-size: 1.2rem;
+}
+
+.benefit-card p {
+    color: #4B5563;
+    line-height: 1.6;
+    margin: 0.75rem 0;
+}
+
+.benefit-example {
+    background: #F0FDF4;
+    border-left: 3px solid #10B981;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.benefit-example strong {
+    color: #065F46;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-example ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefit-example li {
+    color: #4B5563;
+    padding: 0.3rem 0;
+}
+
+/* ============================================
+   BENEFICIOS PARA EMPRESAS
+   ============================================ */
+.business-benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.business-item {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.business-item:hover {
+    border-color: #FF6600;
+    box-shadow: 0 4px 16px rgba(255, 102, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .business-item {
+        flex-direction: column;
+    }
+}
+
+.item-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: linear-gradient(135deg, #FF6600, #FF8833);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.business-item h3 {
+    margin-top: 0;
+    color: #1F2937;
+}
+
+.business-item p {
+    color: #4B5563;
+    margin: 0.5rem 0;
+}
+
+.metric {
+    background: #FFF5E6;
+    padding: 0.75rem;
+    border-radius: 6px;
+    color: #92400E;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+.metric strong {
+    color: #B45309;
+}
+
+/* ============================================
+   CASOS DE ÉXITO
+   ============================================ */
+.success-stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.story {
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.story:hover {
+    border-color: #0066CC;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+}
+
+.story-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.story-header strong {
+    color: #1F2937;
+    font-size: 1.1rem;
+}
+
+.badge {
+    background: linear-gradient(135deg, #0066CC, #00CC66);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.story p {
+    color: #4B5563;
+    line-height: 1.6;
+    margin: 0.75rem 0;
+}
+
+.story p strong {
+    color: #1F2937;
+}
+
+/* ============================================
+   BENEFICIOS PARA EL ESTADO
+   ============================================ */
+.state-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.state-card {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.state-card:hover {
+    border-color: #0066CC;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+    transform: translateY(-3px);
+}
+
+.state-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.state-card h3 {
+    color: #1F2937;
+    margin: 0.5rem 0;
+}
+
+.state-card p {
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0.75rem 0 0;
+}
+
+/* ============================================
+   MÉTRICAS ECONÓMICAS
+   ============================================ */
+.economic-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.metric-card {
+    background: linear-gradient(135deg, #0066CC15, #00CC6615);
+    border: 2px solid #0066CC;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.2);
+    transform: scale(1.05);
+}
+
+.metric-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0066CC;
+    margin-bottom: 0.75rem;
+    line-height: 1;
+}
+
+.metric-card p {
+    color: #4B5563;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ============================================
+   CAJA DE ROI
+   ============================================ */
+.roi-box {
+    background: linear-gradient(135deg, #F0FDF4, #ECFDF5);
+    border-left: 4px solid #10B981;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.roi-box p {
+    color: #1F2937;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 1rem 0;
+}
+
+.roi-box strong {
+    color: #10B981;
+    font-weight: 700;
+}
+
+/* ============================================
+   GRID DE IMPACTO SOCIAL
+   ============================================ */
+.social-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.impact-item {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.impact-item:hover {
+    border-color: #FFCC00;
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.impact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.impact-item h3 {
+    color: #1F2937;
+    margin: 0.5rem 0;
+}
+
+.impact-item p {
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================
+   GRID DE HISTORIAS
+   ============================================ */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.story-card {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.story-card:hover {
+    border-color: #10B981;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.12);
+    transform: translateY(-5px);
+}
+
+.story-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.story-card h3 {
+    margin-top: 0;
+    color: #1F2937;
+    font-size: 1.15rem;
+}
+
+.story-card p {
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0.75rem 0;
+}
+
+.story-card p:first-of-type {
+    font-style: italic;
+    border-left: 3px solid #10B981;
+    padding-left: 1rem;
+}
+
+.story-card p strong {
+    color: #10B981;
+    display: block;
+    font-style: normal;
+    margin-top: 0.75rem;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.lesson-cta-section {
+    background: linear-gradient(135deg, #0066CC15, #00CC6615);
+    border: 2px solid #0066CC;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.lesson-cta-section h3 {
+    color: #1F2937;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.lesson-cta-section p {
+    color: #4B5563;
+    font-size: 1.05rem;
+    margin: 1rem 0;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-large:hover {
+    transform: scale(1.05);
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #FFCC00, #FFD93D);
+    color: #1F2937;
+    border: none;
+    font-weight: 700;
+}
+
+.btn-accent:hover {
+    background: linear-gradient(135deg, #FFD93D, #FFCC00);
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* ============================================
+   NEXT LESSON CARD
+   ============================================ */
+.next-lesson-card {
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .next-lesson-card {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+}
+
+.next-lesson-card:hover {
+    border-color: #0066CC;
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.15);
+}
+
+.next-lesson-content {
+    flex: 1;
+}
+
+.next-lesson-label {
+    display: block;
+    color: #0066CC;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.next-lesson-content h3 {
+    margin: 0.5rem 0;
+    color: #1F2937;
+}
+
+.next-lesson-content p {
+    margin: 0;
+    color: #6B7280;
+}
+
+.btn-primary {
+    white-space: nowrap;
+    padding: 0.75rem 1.5rem;
+}
+
+/* ============================================
+   INFO BOX - SUCCESS
+   ============================================ */
+.info-box.info-success {
+    background: linear-gradient(135deg, #10B98115, #D1FAE515);
+    border-left-color: #10B981;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .benefits-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .success-stories {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .state-benefits {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .economic-metrics {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .social-impact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .metric-card {
+        padding: 1rem;
+    }
+
+    .metric-number {
+        font-size: 1.5rem;
+    }
+
+    .lesson-cta-section {
+        padding: 1.5rem;
+    }
+
+    .roi-box {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .badge {
+        align-self: flex-start;
+    }
+
+    .economic-metrics {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .metric-number {
+        font-size: 1.3rem;
+    }
+}

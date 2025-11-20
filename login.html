@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inicia sesión en AR Bot - Plataforma educativa de transformación digital">
+    <title>Iniciar Sesión - AR Bot</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <img src="images/Logo.png" alt="AR Bot Logo" class="logo-img">
+                <span class="logo-text">AR BOT</span>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="aprende.html">Aprende</a></li>
+                <li><a href="practica.html">Practica</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="escanea-ar.html" class="btn-nav-ar">Escanear AR</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- LOGIN SECTION -->
+    <section class="auth-section">
+        <div class="container">
+            
+            <!-- Back Button -->
+            <button class="back-btn" onclick="window.location.href='index.html'">
+                <span>←</span>
+                <span>Volver al inicio</span>
+            </button>
+            
+            <div class="auth-container">
+                
+                <!-- Left Side - Image/Info -->
+                <div class="auth-side">
+                    <div class="auth-side-content">
+                        <div class="auth-logo">
+                            <img src="images/Logo.png" alt="AR Bot Logo">
+                        </div>
+                        <h2 class="auth-side-title">¡Bienvenido de vuelta!</h2>
+                        <p class="auth-side-description">
+                            Continúa tu aprendizaje sobre transformación digital y seguridad
+                        </p>
+                        
+                        <div class="auth-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✓</span>
+                                <span>Guarda tu progreso</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✓</span>
+                                <span>Accede a tus quizzes</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✓</span>
+                                <span>Obtén certificados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Form -->
+                <div class="auth-form-container">
+                    <div class="auth-form-wrapper">
+                        
+                        <h1 class="auth-title">Iniciar Sesión</h1>
+                        <p class="auth-subtitle">Ingresa tus credenciales para continuar</p>
+                        
+                        <!-- Mensaje de error/éxito -->
+                        <div id="authMessage" class="auth-message" style="display: none;"></div>
+                        
+                        <!-- Formulario de Login -->
+                        <form id="loginForm" class="auth-form">
+                            
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <span class="label-icon">📧</span>
+                                    Correo Electrónico
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email"
+                                    class="form-input"
+                                    placeholder="tu@email.com"
+                                    required
+                                >
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                            
+                            <!-- Password -->
+                            <div class="form-group">
+                                <label for="password" class="form-label">
+                                    <span class="label-icon">🔒</span>
+                                    Contraseña
+                                </label>
+                                <div class="password-input-wrapper">
+                                    <input 
+                                        type="password" 
+                                        id="password" 
+                                        name="password"
+                                        class="form-input"
+                                        placeholder="••••••••"
+                                        required
+                                    >
+                                    <button type="button" class="toggle-password" id="togglePassword">
+                                        <span class="eye-icon">👁️</span>
+                                    </button>
+                                </div>
+                                <span class="form-error" id="passwordError"></span>
+                            </div>
+                            
+                            <!-- Remember Me & Forgot Password -->
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                                    <span>Recordar sesión</span>
+                                </label>
+                                <a href="recuperar-password.html" class="forgot-link">
+                                    ¿Olvidaste tu contraseña?
+                                </a>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-full btn-large">
+                                <span class="btn-icon">🚀</span>
+                                <span>Iniciar Sesión</span>
+                            </button>
+                            
+                        </form>
+                        
+                        <!-- Divider -->
+                        <div class="auth-divider">
+                            <span>O continúa con</span>
+                        </div>
+                        
+                        <!-- Social Login -->
+                        <div class="social-login">
+                            <button class="social-btn google-btn">
+                                <span class="social-icon">🌐</span>
+                                <span>Google</span>
+                            </button>
+                            <button class="social-btn facebook-btn">
+                                <span class="social-icon">📘</span>
+                                <span>Facebook</span>
+                            </button>
+                        </div>
+                        
+                        <!-- Sign Up Link -->
+                        <div class="auth-footer">
+                            <p>¿No tienes una cuenta? 
+                                <a href="registro.html" class="auth-link">Regístrate aquí</a>
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-column">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="aprende.html">Aprende</a></li>
+                        <li><a href="practica.html">Practica</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terminos.html">Términos y Condiciones</a></li>
+                        <li><a href="privacidad.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="acerca-de.html">Acerca de</a></li>
+                        <li><a href="https://www.umng.edu.co" target="_blank">Universidad Militar</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 AR Bot | CONPES 3975 y 3995</p>
+                <p>Hecho con ❤️ por Brian, Santiago, Juan y David</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    
+</body>
+</html>

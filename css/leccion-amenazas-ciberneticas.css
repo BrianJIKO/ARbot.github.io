@@ -1,0 +1,688 @@
+/* ============================================
+   CSS ESPECÍFICO: Amenazas Cibernéticas Comunes
+   leccion-amenazas-ciberneticas.css
+   ============================================ */
+
+/* NIVEL BÁSICO - Badge color diferenciado */
+.level-basico {
+    color: #10B981 !important;
+    font-weight: 600;
+}
+
+/* ============================================
+   THREAT SECTIONS
+   ============================================ */
+.threat-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #E5E7EB;
+}
+
+.threat-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 2rem;
+}
+
+.threat-section h2 {
+    color: #1F2937;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.threat-intro {
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border-left: 4px solid #CC0000;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #4B5563;
+}
+
+/* ============================================
+   THREAT CARDS
+   ============================================ */
+.threat-card {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.threat-card:hover {
+    border-color: #CC0000;
+    box-shadow: 0 8px 20px rgba(204, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.threat-header {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.threat-header h3 {
+    margin: 0;
+    color: #1F2937;
+    font-size: 1.2rem;
+}
+
+.threat-description {
+    color: #4B5563;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+/* ============================================
+   THREAT STEPS
+   ============================================ */
+.threat-steps {
+    background: linear-gradient(135deg, #FFF0F0, #FFE5E5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.threat-steps ol {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.threat-steps li {
+    color: #4B5563;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.threat-steps strong {
+    color: #1F2937;
+    font-weight: 600;
+}
+
+/* ============================================
+   WARNING GRID
+   ============================================ */
+.warning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.warning-item {
+    background: linear-gradient(135deg, #FFF0F0, #FFE5E5);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #CC0000;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.warning-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.warning-item p {
+    margin: 0;
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ============================================
+   PROTECTION LIST
+   ============================================ */
+.protection-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.protection-list li {
+    color: #4B5563;
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    line-height: 1.6;
+}
+
+.protection-list li:before {
+    content: "✓";
+    color: #10B981;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.protection-list li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   MALWARE TYPES
+   ============================================ */
+.malware-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.malware-type {
+    background: linear-gradient(135deg, #FFF0F0, #FFE5E5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #CC0000;
+}
+
+.malware-type h4 {
+    color: #1F2937;
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.malware-type p {
+    margin: 0;
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ============================================
+   INFECTION SIGNS
+   ============================================ */
+.infection-signs {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.infection-signs li {
+    color: #4B5563;
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    line-height: 1.6;
+}
+
+.infection-signs li:before {
+    content: "⚠️";
+    position: absolute;
+    left: 0;
+}
+
+.infection-signs li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   FRAUD TYPES
+   ============================================ */
+.fraud-types {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.fraud-type {
+    background: linear-gradient(135deg, #FFF0F0, #FFE5E5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #CC0000;
+}
+
+.fraud-type h4 {
+    color: #1F2937;
+    margin: 0 0 0.75rem 0;
+    font-size: 1.05rem;
+}
+
+.fraud-type p {
+    color: #4B5563;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.fraud-example {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* ============================================
+   PASSWORD THEFT
+   ============================================ */
+.password-theft {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.theft-method {
+    background: linear-gradient(135deg, #FFF0F0, #FFE5E5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+}
+
+.method-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #CC0000;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.theft-method h4 {
+    color: #1F2937;
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.theft-method p {
+    margin: 0;
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ============================================
+   WARNING SIGNS
+   ============================================ */
+.warning-signs {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.warning-signs li {
+    color: #4B5563;
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    line-height: 1.6;
+}
+
+.warning-signs li:before {
+    content: "🚨";
+    position: absolute;
+    left: 0;
+}
+
+.warning-signs li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   STATS GRID
+   ============================================ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat-box {
+    background: linear-gradient(135deg, #FFE5E5, #FFF0F0);
+    border: 2px solid #CC0000;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(204, 0, 0, 0.15);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #CC0000;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   INITIATIVES
+   ============================================ */
+.initiatives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.initiative {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.initiative:hover {
+    border-color: #CC0000;
+    box-shadow: 0 4px 12px rgba(204, 0, 0, 0.1);
+}
+
+.init-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.initiative h4 {
+    color: #1F2937;
+    margin: 0.5rem 0;
+    font-size: 1.05rem;
+}
+
+.initiative p {
+    color: #4B5563;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ============================================
+   DEFENSE CHECKLIST
+   ============================================ */
+.defense-checklist {
+    margin: 2rem 0;
+}
+
+.defense-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.defense-item:last-child {
+    border-bottom: none;
+}
+
+.defense-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #CC0000, #FF4444);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.defense-content h4 {
+    color: #1F2937;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.defense-content p {
+    color: #4B5563;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ============================================
+   REPORTING GRID
+   ============================================ */
+.reporting-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.reporting-option {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.reporting-option:hover {
+    border-color: #10B981;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+.reporting-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.reporting-icon {
+    font-size: 2rem;
+}
+
+.reporting-header h3 {
+    margin: 0;
+    color: #1F2937;
+    font-size: 1.1rem;
+}
+
+.reporting-desc {
+    color: #4B5563;
+    font-size: 0.95rem;
+    margin: 0.75rem 0;
+    line-height: 1.5;
+}
+
+.reporting-link {
+    display: block;
+    color: #0066CC;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0.75rem 0;
+    word-break: break-all;
+}
+
+.reporting-link:hover {
+    text-decoration: underline;
+}
+
+.reporting-note {
+    color: #6B7280;
+    font-size: 0.9rem;
+    margin: 0.75rem 0 0 0;
+    font-style: italic;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.lesson-cta-section {
+    background: linear-gradient(135deg, #CC000015, #FF444415);
+    border: 2px solid #CC0000;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.lesson-cta-section h3 {
+    color: #1F2937;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.lesson-cta-section p {
+    color: #4B5563;
+    font-size: 1.05rem;
+    margin: 1rem 0;
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #FFCC00, #FFD93D);
+    color: #1F2937;
+    border: none;
+    font-weight: 700;
+}
+
+.btn-accent:hover {
+    background: linear-gradient(135deg, #FFD93D, #FFCC00);
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-large:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   NEXT LESSON CARD
+   ============================================ */
+.next-lesson-card {
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .next-lesson-card {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+}
+
+.next-lesson-card:hover {
+    border-color: #0066CC;
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.15);
+}
+
+.next-lesson-content {
+    flex: 1;
+}
+
+.next-lesson-label {
+    display: block;
+    color: #0066CC;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.next-lesson-content h3 {
+    margin: 0.5rem 0;
+    color: #1F2937;
+}
+
+.next-lesson-content p {
+    margin: 0;
+    color: #6B7280;
+}
+
+.btn-primary {
+    white-space: nowrap;
+    padding: 0.75rem 1.5rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .threat-section {
+        margin-top: 2rem;
+        padding-top: 1rem;
+    }
+
+    .warning-grid,
+    .malware-types,
+    .password-theft,
+    .stats-grid,
+    .initiatives,
+    .reporting-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .defense-item {
+        gap: 1rem;
+    }
+
+    .lesson-cta-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .threat-card {
+        padding: 1rem;
+    }
+
+    .threat-header h3 {
+        font-size: 1rem;
+    }
+
+    .threat-steps,
+    .warning-item,
+    .malware-type,
+    .fraud-type,
+    .stat-box,
+    .initiative,
+    .reporting-option {
+        padding: 1rem;
+    }
+
+    .next-lesson-card {
+        padding: 1rem;
+    }
+
+    .defense-number {
+        min-width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}

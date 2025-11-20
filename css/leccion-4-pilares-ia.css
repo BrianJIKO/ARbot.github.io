@@ -1,0 +1,2075 @@
+/* ============================================
+   CSS ESPECÍFICO: Los 4 Pilares de la IA
+   leccion-4-pilares-ia.css - VERSIÓN RESPONSIVE CORREGIDA
+   ============================================ */
+
+/* ============================================
+   RESET Y BASE RESPONSIVE - CRÍTICO
+   ============================================ */
+
+/* Prevenir overflow horizontal */
+html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+/* Contenedor principal responsive */
+.lesson-layout,
+.container,
+.lesson-wrapper,
+.lesson-content {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box !important;
+}
+
+@media (min-width: 768px) {
+    .lesson-layout,
+    .container,
+    .lesson-wrapper,
+    .lesson-content {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}
+
+/* Asegurar que todos los elementos respeten el ancho */
+* {
+    box-sizing: border-box;
+}
+
+img, video, iframe {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Tablas responsive */
+table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+}
+
+/* NIVEL INTERMEDIO - Badge color diferenciado */
+.level-intermedio {
+    color: #FF6600 !important;
+    font-weight: 600;
+}
+
+/* ============================================
+   GRILLA DE EJEMPLOS DE IA
+   ============================================ */
+.ia-examples-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+@media (min-width: 480px) {
+    .ia-examples-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .ia-examples-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ia-examples-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+
+.example-item {
+    background: linear-gradient(135deg, #0066CC15, #00CC6615);
+    border: 2px solid #0066CC;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .example-item {
+        padding: 1.5rem;
+    }
+}
+
+@media (hover: hover) {
+    .example-item:hover {
+        transform: translateY(-5px);
+        border-color: #00CC66;
+        background: linear-gradient(135deg, #0066CC25, #00CC6625);
+        box-shadow: 0 8px 16px rgba(0, 102, 204, 0.2);
+    }
+}
+
+.example-item .example-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .example-item .example-icon {
+        font-size: 2.5rem;
+    }
+}
+
+.example-item h4 {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    color: #1F2937;
+}
+
+@media (min-width: 768px) {
+    .example-item h4 {
+        font-size: 1rem;
+    }
+}
+
+.example-item p {
+    font-size: 0.8rem;
+    color: #6B7280;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .example-item p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ============================================
+   ESTADÍSTICAS DE SITUACIÓN ACTUAL
+   ============================================ */
+.stats-situation {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+@media (min-width: 480px) {
+    .stats-situation {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .stats-situation {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .stats-situation {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.stat-bad {
+    background: linear-gradient(135deg, #CC000015, #FF660015);
+    border-left: 4px solid #CC0000;
+    padding: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .stat-bad {
+        padding: 1.5rem;
+    }
+}
+
+.stat-emoji {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-bad strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #1F2937;
+    margin: 0.5rem 0;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .stat-bad strong {
+        font-size: 1.3rem;
+    }
+}
+
+.stat-bad small {
+    display: block;
+    color: #6B7280;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .stat-bad small {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   TIMELINE CONPES
+   ============================================ */
+.conpes-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .conpes-timeline {
+        gap: 2rem;
+    }
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, #0066CC10, #00CC6610);
+    border-left: 4px solid #0066CC;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+}
+
+.timeline-year {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0066CC;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .timeline-year {
+        font-size: 1.8rem;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.timeline-content h4 {
+    margin-top: 0;
+    color: #1F2937;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .timeline-content h4 {
+        font-size: 1.1rem;
+    }
+}
+
+.timeline-content p {
+    margin: 0.5rem 0;
+    color: #4B5563;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .timeline-content p {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   ENCABEZADO DE PILAR
+   ============================================ */
+.pilar-section {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #E5E7EB;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .pilar-section {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+}
+
+.pilar-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 2rem;
+}
+
+.pilar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .pilar-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.pilar-number {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+@media (min-width: 768px) {
+    .pilar-number {
+        font-size: 2.5rem;
+    }
+}
+
+.pilar-header h2 {
+    margin: 0;
+    flex: 1;
+    font-size: 1.3rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .pilar-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.pilar-intro-box {
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border-left: 4px solid #0066CC;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .pilar-intro-box {
+        padding: 1.5rem;
+        font-size: 1.05rem;
+    }
+}
+
+/* ============================================
+   GRID DE PRINCIPIOS
+   ============================================ */
+.principles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .principles-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .principles-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.principle-card {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .principle-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (hover: hover) {
+    .principle-card:hover {
+        border-color: #0066CC;
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+        transform: translateY(-3px);
+    }
+}
+
+.principle-number {
+    position: absolute;
+    top: -12px;
+    left: 1.5rem;
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #0066CC, #00CC66);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.principle-card h4 {
+    margin-top: 1rem;
+    color: #1F2937;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .principle-card h4 {
+        font-size: 1rem;
+    }
+}
+
+.principle-card p {
+    color: #4B5563;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+.principle-card .example {
+    background: #FFFBEB;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #78350F;
+    margin-top: 0.75rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .principle-card .example {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   ESTRUCTURA DE GOBERNANZA
+   ============================================ */
+.governance-structure {
+    background: linear-gradient(135deg, #F3F4F6, #F9FAFB);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .governance-structure {
+        padding: 2rem;
+    }
+}
+
+.governance-level {
+    background: white;
+    border: 2px solid #0066CC;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    font-weight: 600;
+    color: #1F2937;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .governance-level {
+        padding: 1.2rem;
+        min-width: 200px;
+        width: auto;
+        font-size: 1rem;
+    }
+}
+
+.governance-level small {
+    display: block;
+    color: #6B7280;
+    margin-top: 0.5rem;
+    font-weight: normal;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .governance-level small {
+        font-size: 0.9rem;
+    }
+}
+
+.governance-arrow {
+    font-size: 1.2rem;
+    color: #0066CC;
+}
+
+@media (min-width: 768px) {
+    .governance-arrow {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================
+   CAJA DE ANALOGÍA
+   ============================================ */
+.analogy-box {
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .analogy-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+}
+
+.analogy-item {
+    background: white;
+    border: 2px solid #0066CC;
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .analogy-item {
+        min-width: 150px;
+        width: auto;
+        flex: 0 1 auto;
+        padding: 1.5rem;
+    }
+}
+
+.analogy-item strong {
+    display: block;
+    color: #0066CC;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .analogy-item strong {
+        font-size: 1.1rem;
+    }
+}
+
+.analogy-item p {
+    margin: 0;
+    color: #6B7280;
+    font-size: 0.85rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .analogy-item p {
+        font-size: 0.9rem;
+    }
+}
+
+.analogy-connector {
+    font-size: 1.2rem;
+    color: #0066CC;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .analogy-connector {
+        font-size: 1.5rem;
+    }
+}
+
+.analogy-result {
+    background: linear-gradient(135deg, #0066CC, #00CC66);
+    color: white;
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .analogy-result {
+        min-width: 150px;
+        width: auto;
+        flex: 0 1 auto;
+        padding: 1.5rem;
+    }
+}
+
+.analogy-result strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .analogy-result strong {
+        font-size: 1.1rem;
+    }
+}
+
+.analogy-result p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .analogy-result p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   TABLA DE CALIDAD DE DATOS
+   ============================================ */
+.data-quality-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+.data-quality-table table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.data-quality-table thead {
+    background: linear-gradient(135deg, #0066CC, #0052A3);
+    color: white;
+}
+
+.data-quality-table th {
+    padding: 0.8rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .data-quality-table th {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+.data-quality-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .data-quality-table td {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+.data-quality-table tbody tr:hover {
+    background: #F9FAFB;
+}
+
+/* ============================================
+   STACK DE INFRAESTRUCTURA
+   ============================================ */
+.infrastructure-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.stack-layer {
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+    .stack-layer {
+        padding: 2rem;
+    }
+}
+
+.stack-layer:last-child {
+    border-bottom: none;
+}
+
+.stack-layer strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .stack-layer strong {
+        font-size: 1.2rem;
+    }
+}
+
+.stack-layer p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .stack-layer p {
+        font-size: 1rem;
+    }
+}
+
+.stack-1 {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+}
+
+.stack-2 {
+    background: linear-gradient(135deg, #4ECDC4, #6FD9D2);
+}
+
+.stack-3 {
+    background: linear-gradient(135deg, #45B7D1, #6BC5D6);
+}
+
+.stack-4 {
+    background: linear-gradient(135deg, #96CEB4, #B3D9A7);
+}
+
+/* ============================================
+   NIVELES DE I+D+I
+   ============================================ */
+.rdi-levels {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .rdi-levels {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .rdi-levels {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.level {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .level {
+        padding: 1.5rem;
+    }
+}
+
+@media (hover: hover) {
+    .level:hover {
+        border-color: #0066CC;
+        box-shadow: 0 8px 16px rgba(0, 102, 204, 0.1);
+    }
+}
+
+.level-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .level-icon {
+        font-size: 2.5rem;
+    }
+}
+
+.level h4 {
+    color: #1F2937;
+    margin: 1rem 0 0.5rem;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .level h4 {
+        font-size: 1rem;
+    }
+}
+
+.level p {
+    color: #6B7280;
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .level p {
+        font-size: 0.9rem;
+    }
+}
+
+.level .actor {
+    background: #F3F4F6;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #4B5563;
+    margin-top: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .level .actor {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   CUADRO DE COMPARACIÓN
+   ============================================ */
+.comparison-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .comparison-box {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+.comparison-box .side {
+    padding: 1.2rem;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .comparison-box .side {
+        padding: 1.5rem;
+    }
+}
+
+.comparison-box .side:first-child {
+    background: linear-gradient(135deg, #CC000015, #FF660015);
+    border-left: 4px solid #CC0000;
+}
+
+.comparison-box .side:last-child {
+    background: linear-gradient(135deg, #00CC6615, #10B98115);
+    border-left: 4px solid #10B981;
+}
+
+.comparison-box h4 {
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .comparison-box h4 {
+        font-size: 1.1rem;
+    }
+}
+
+.comparison-box ul {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .comparison-box ul {
+        padding-left: 1.5rem;
+    }
+}
+
+.comparison-box li {
+    margin: 0.5rem 0;
+    color: #4B5563;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .comparison-box li {
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================
+   DESGLOSE DE INVERSIÓN
+   ============================================ */
+.investment-breakdown {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+@media (min-width: 480px) {
+    .investment-breakdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .investment-breakdown {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .investment-breakdown {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.investment-item {
+    background: linear-gradient(135deg, #0066CC10, #00CC6610);
+    border: 2px solid #0066CC;
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .investment-item {
+        padding: 1.5rem;
+    }
+}
+
+@media (hover: hover) {
+    .investment-item:hover {
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+        transform: translateY(-2px);
+    }
+}
+
+.percentage {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0066CC;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .percentage {
+        font-size: 2rem;
+    }
+}
+
+.investment-item p {
+    margin: 0;
+    color: #4B5563;
+    font-size: 0.85rem;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .investment-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   GRID DE CASOS DE USO
+   ============================================ */
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+@media (min-width: 480px) {
+    .use-cases-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .use-cases-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .use-cases-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+
+.use-case {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .use-case {
+        padding: 1.5rem;
+    }
+}
+
+@media (hover: hover) {
+    .use-case:hover {
+        border-color: #00CC66;
+        box-shadow: 0 4px 12px rgba(0, 204, 102, 0.15);
+    }
+}
+
+.uc-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .uc-icon {
+        font-size: 2.5rem;
+    }
+}
+
+.use-case h4 {
+    color: #1F2937;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .use-case h4 {
+        font-size: 1rem;
+    }
+}
+
+.use-case p {
+    color: #6B7280;
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .use-case p {
+        font-size: 0.9rem;
+    }
+}
+
+.use-case p strong {
+    color: #0066CC;
+    display: block;
+}
+
+/* ============================================
+   PIRÁMIDE DE COMPETENCIAS
+   ============================================ */
+.pyramid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 2rem auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .pyramid {
+        max-width: 400px;
+    }
+}
+
+.pyramid-level {
+    padding: 1.2rem;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .pyramid-level {
+        padding: 1.5rem;
+    }
+}
+
+@media (hover: hover) {
+    .pyramid-level:hover {
+        transform: scale(1.05);
+    }
+}
+
+.pyramid-level strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .pyramid-level strong {
+        font-size: 1.2rem;
+    }
+}
+
+.pyramid-level small {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+    .pyramid-level small {
+        font-size: 0.85rem;
+    }
+}
+
+.level-1 {
+    background: linear-gradient(135deg, #0066CC, #0052A3);
+    border-radius: 8px 8px 0 0;
+}
+
+.level-2 {
+    background: linear-gradient(135deg, #0066CC, #0066CC);
+}
+
+.level-3 {
+    background: linear-gradient(135deg, #0066CC, #1E3A8A);
+}
+
+.level-4 {
+    background: linear-gradient(135deg, #1E3A8A, #111827);
+    border-radius: 0 0 8px 8px;
+}
+
+/* ============================================
+   NIVELES DE FORMACIÓN
+   ============================================ */
+.training-levels {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.training-level {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.2rem;
+    border-left: 4px solid #0066CC;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .training-level {
+        padding: 1.5rem;
+    }
+}
+
+@media (hover: hover) {
+    .training-level:hover {
+        border-left-color: #00CC66;
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+    }
+}
+
+.training-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #0066CC, #00CC66);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.training-level h4 {
+    margin: 0 0 1rem;
+    color: #1F2937;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .training-level h4 {
+        font-size: 1.1rem;
+    }
+}
+
+.training-level p {
+    margin: 0.5rem 0;
+    color: #4B5563;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .training-level p {
+        font-size: 0.95rem;
+    }
+}
+
+.goal, .skills, .duration, .programs, .support {
+    margin: 0.75rem 0 !important;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.goal::before, .skills::before, .duration::before, .programs::before, .support::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #0066CC;
+    font-weight: bold;
+}
+
+.salary {
+    background: #FFFBEB;
+    padding: 0.75rem;
+    border-radius: 6px;
+    color: #78350F;
+    margin: 0.75rem 0 !important;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   BRECHA DE TALENTO
+   ============================================ */
+.talent-gap {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .talent-gap {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+}
+
+.gap-metric {
+    text-align: center;
+}
+
+.gap-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    .gap-number {
+        font-size: 2.5rem;
+    }
+}
+
+.gap-number.demand {
+    color: white;
+    background: linear-gradient(135deg, #0066CC, #0052A3);
+}
+
+.gap-number.supply {
+    color: white;
+    background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+}
+
+.gap-number.gap {
+    color: white;
+    background: linear-gradient(135deg, #FF6600, #FF8833);
+}
+
+.gap-metric p {
+    color: #4B5563;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .gap-metric p {
+        font-size: 0.9rem;
+    }
+}
+
+.gap-label {
+    font-size: 1.2rem;
+    color: #6B7280;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .gap-label {
+        font-size: 1.5rem;
+    }
+}
+
+/* ============================================
+   ESTRATEGIAS
+   ============================================ */
+.strategies {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .strategies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .strategies {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+.strategy {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .strategy {
+        padding: 1.5rem;
+    }
+}
+
+@media (hover: hover) {
+    .strategy:hover {
+        border-color: #00CC66;
+        box-shadow: 0 4px 12px rgba(0, 204, 102, 0.15);
+    }
+}
+
+.strategy-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .strategy-icon {
+        font-size: 2.5rem;
+    }
+}
+
+.strategy h4 {
+    color: #1F2937;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .strategy h4 {
+        font-size: 1rem;
+    }
+}
+
+.strategy p {
+    color: #6B7280;
+    margin: 0;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .strategy p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================
+   INTEGRACIÓN DE PILARES
+   ============================================ */
+.integrated-example {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 2rem 0;
+    background: linear-gradient(to bottom, #F9FAFB, #F3F4F6);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.example-step {
+    padding: 1.2rem;
+    background: white;
+    border-bottom: 1px solid #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .example-step {
+        flex-direction: row;
+        padding: 1.5rem;
+    }
+}
+
+.example-step:last-of-type {
+    border-bottom: none;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: linear-gradient(135deg, #0066CC, #00CC66);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.example-step div {
+    flex: 1;
+}
+
+.example-step h4 {
+    margin-top: 0;
+    color: #1F2937;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .example-step h4 {
+        font-size: 1rem;
+    }
+}
+
+.example-step p {
+    margin: 0.5rem 0 0;
+    color: #4B5563;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .example-step p {
+        font-size: 0.95rem;
+    }
+}
+
+.step-arrow {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    background: #E5E7EB;
+    font-size: 1.2rem;
+    color: #0066CC;
+    font-weight: bold;
+}
+
+/* ============================================
+   TABLA DE DEPENDENCIAS
+   ============================================ */
+.dependency-table {
+    overflow-x: auto;
+    margin: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+.dependency-table table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dependency-table thead {
+    background: linear-gradient(135deg, #0066CC, #0052A3);
+    color: white;
+}
+
+.dependency-table th {
+    padding: 0.8rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .dependency-table th {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+.dependency-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #E5E7EB;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .dependency-table td {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+.dependency-table tbody tr:nth-child(odd) {
+    background: #F9FAFB;
+}
+
+.dependency-table tbody tr:hover {
+    background: #F3F4F6;
+}
+
+.dependency-table strong {
+    color: #1F2937;
+}
+
+/* ============================================
+   METAS 2030
+   ============================================ */
+.goals-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+@media (min-width: 480px) {
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .goals-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.goal-item {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .goal-item {
+        padding: 1.5rem;
+    }
+}
+
+@media (hover: hover) {
+    .goal-item:hover {
+        border-color: #0066CC;
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+    }
+}
+
+.goal-current, .goal-target {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@media (min-width: 768px) {
+    .goal-current, .goal-target {
+        font-size: 1.8rem;
+    }
+}
+
+.goal-current {
+    color: #FF6B6B;
+    margin-bottom: 0.5rem;
+}
+
+.goal-target {
+    color: #10B981;
+    margin-top: 0.5rem;
+}
+
+.goal-label {
+    color: #6B7280;
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+    .goal-label {
+        font-size: 0.9rem;
+    }
+}
+
+.goal-arrow {
+    color: #0066CC;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+/* ============================================
+   LISTA DE VISIÓN
+   ============================================ */
+.vision-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.vision-list li {
+    padding: 1rem;
+    margin: 0.75rem 0;
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border-left: 4px solid #00CC66;
+    border-radius: 6px;
+    color: #1F2937;
+    font-size: 0.95rem;
+    word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+    .vision-list li {
+        font-size: 1.05rem;
+    }
+}
+
+.vision-list li strong {
+    color: #0066CC;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.lesson-cta-section {
+    background: linear-gradient(135deg, #0066CC15, #00CC6615);
+    border: 2px solid #0066CC;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2.5rem 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .lesson-cta-section {
+        padding: 2rem;
+    }
+}
+
+.lesson-cta-section h3 {
+    color: #1F2937;
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+    .lesson-cta-section h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.lesson-cta-section p {
+    color: #4B5563;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .lesson-cta-section p {
+        font-size: 1.05rem;
+    }
+}
+
+.btn-large {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    .btn-large {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (hover: hover) {
+    .btn-large:hover {
+        transform: scale(1.05);
+    }
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #FFCC00, #FFD93D);
+    color: #1F2937;
+    border: none;
+    font-weight: 700;
+}
+
+.btn-accent:hover {
+    background: linear-gradient(135deg, #FFD93D, #FFCC00);
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+/* ============================================
+   NEXT LESSON CARD
+   ============================================ */
+.next-lesson-card {
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .next-lesson-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+}
+
+.next-lesson-card:hover {
+    border-color: #0066CC;
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.15);
+}
+
+.next-lesson-content {
+    flex: 1;
+}
+
+.next-lesson-label {
+    display: block;
+    color: #0066CC;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.next-lesson-content h3 {
+    margin: 0.5rem 0;
+    color: #1F2937;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .next-lesson-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
+.next-lesson-content p {
+    margin: 0;
+    color: #6B7280;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .next-lesson-content p {
+        font-size: 0.95rem;
+    }
+}
+
+.btn-primary {
+    white-space: nowrap;
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .btn-primary {
+        width: auto;
+    }
+}
+
+/* ============================================
+   CUADROS DE INFORMACIÓN
+   ============================================ */
+.info-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.info-box.info-success {
+    background: linear-gradient(135deg, #10B98115, #D1FAE515);
+    border-left: 4px solid #10B981;
+}
+
+.info-box.info-tip {
+    background: linear-gradient(135deg, #3B82F615, #60A5FA15);
+    border-left: 4px solid #3B82F6;
+}
+
+.info-box.info-warning {
+    background: linear-gradient(135deg, #F59E0B15, #FCD34D15);
+    border-left: 4px solid #F59E0B;
+}
+
+/* ============================================
+   VIDEO Y AR OPTION
+   ============================================ */
+.lesson-video {
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem 0;
+}
+
+.lesson-video video {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+}
+
+.ar-option-container {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.ar-option-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #F9FAFB, #F3F4F6);
+    border-radius: 12px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .ar-option-box {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+.qr-image {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .qr-image {
+        max-width: 200px;
+    }
+}
+
+.ar-text-content {
+    flex: 1;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .ar-text-content {
+        text-align: left;
+    }
+}
+
+/* ============================================
+   AJUSTES GENERALES DE TEXTO
+   ============================================ */
+p, li, td, th {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* ============================================
+   OPTIMIZACIÓN PARA IMPRESIÓN
+   ============================================ */
+@media print {
+    .lesson-cta-section,
+    .next-lesson-card {
+        break-inside: avoid;
+    }
+    
+    .pilar-section {
+        page-break-inside: avoid;
+    }
+    
+    html, body {
+        overflow: visible !important;
+    }
+}
